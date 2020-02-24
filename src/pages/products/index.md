@@ -55,10 +55,10 @@ main:
     image: /img/products-grid3.jpg
   image2:
     alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    image: /img/2472596.jpg
   image3:
     alt: Coffee beans
-    image: /img/products-grid1.jpg
+    image: /img/1520.jpg
 testimonials:
   - author: Elisabeth Kaurismäki
     quote: >-
@@ -96,7 +96,7 @@ pricing:
         - Green or roasted beans
         - Unlimited varieties
       plan: Custom
-      price: '??'
+      price: '56'
     - description: >-
         this a description of the plan Contact us about more details and payment
         info
