@@ -97,5 +97,12 @@ pricing:
         - Unlimited varieties
       plan: Custom
       price: '??'
+    - description: >-
+        this a description of the plan Contact us about more details and payment
+        info
+      items:
+        - items ....items. Contact us about more details and payment info
+      plan: Commercial
+      price: '40'
 ---
 
