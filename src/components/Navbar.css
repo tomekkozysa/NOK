@@ -2,12 +2,25 @@
   width: 100%;
   background-color: #111;
 }
-.openbtn {
-  font-size: 20px;
-  background-color: #111;
+.openbtnTransparent {
+  font-size: 30px;
+  background-color: Transparent;
   cursor: pointer;
   color: white;
   padding: 10px 15px;
+  border: none;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.openbtn {
+  font-size: 25px;
+  background-color: #111;
+  cursor: pointer;
+  color: white;
+  padding: 5px 10px;
+  margin: 10px 10px;
   border: none;
   text-align: left;
 }

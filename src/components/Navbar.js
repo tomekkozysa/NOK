@@ -44,7 +44,7 @@ const Navbar = class extends React.Component {
             ×
           </a> */}
           <button className="openbtn" onClick={() => this.toggleHamburger()}>
-            ☰
+            <b>X</b>
           </button>
           <Link className="sidebarLink" to="/">
             Home
@@ -62,11 +62,12 @@ const Navbar = class extends React.Component {
             Contact
           </Link>
         </div>
-        <div className="navLine">
-          <button className="openbtn" onClick={() => this.toggleHamburger()}>
-            ☰
-          </button>
-        </div>
+        <button
+          className="openbtnTransparent"
+          onClick={() => this.toggleHamburger()}
+        >
+          ☰
+        </button>
       </div>
     );
   }
