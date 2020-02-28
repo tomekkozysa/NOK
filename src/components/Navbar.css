@@ -21,7 +21,7 @@
 .openbtn:focus {
   outline: 0;
 }
-.sidebar .SidebarLink:hover {
+.sidebar .sidebarLink:hover {
   color: #f1f1f1;
 }
 
@@ -44,15 +44,13 @@
 .sidebar {
   width: 0px;
   transition: ease 0.5s;
-
   height: 100%;
   position: fixed;
   z-index: 1;
-  top: 40px;
+  top: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  padding-top: 60px;
 }
 .is-active {
   width: 250px;

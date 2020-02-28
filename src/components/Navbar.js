@@ -35,10 +35,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <div>
-        <div
-          id="mySidebar"
-          className={`sidebar ${this.state.navBarActiveClass}`}
-        >
+        <div className={`sidebar ${this.state.navBarActiveClass}`}>
           {/* <a
             href="javascript:void(0)"
             className="closebtn"
@@ -46,6 +43,9 @@ const Navbar = class extends React.Component {
           >
             ×
           </a> */}
+          <button className="openbtn" onClick={() => this.toggleHamburger()}>
+            ☰
+          </button>
           <Link className="sidebarLink" to="/">
             Home
           </Link>
