@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: NEXT of Kin
-image: /img/2472596.jpg
+image: /img/7173.jpg
 heading: When picture talk
 subheading: shooting videos that stay in memory
 mainpitch:
