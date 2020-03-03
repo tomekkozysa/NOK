@@ -7,10 +7,7 @@ subheading: shooting videos that stay in memory
 mainpitch:
   title: Why KIN
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    Lorem ipsum dolor sit amet, ius in quot urbanitas, officiis aliquando mnesarchum te sea. Vix at hinc iuvaret deserunt, ei eum noster mnesarchum. Mel prima eleifend interesset ei, et intellegat disputationi sed. Ut nec nonumes suavitate disputationi. Sea eu tantas facete scriptorem, laudem possim tractatos eu sed, an libris inermis theophrastus has.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -68,4 +65,3 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
-
