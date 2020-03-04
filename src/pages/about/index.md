@@ -1,8 +1,8 @@
 ---
-templateKey: "about-page"
-path: /about
+templateKey: about-page
 title: About our values
 ---
+![](/img/1520.jpg)
 
 ### Next Of Kin
 
