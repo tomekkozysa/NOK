@@ -18,24 +18,24 @@ description: >-
   prima eleifend interesset ei, 
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/1520.jpg
       text: >
         Lorem ipsum dolor sit amet, ius in quot urbanitas, officiis aliquando
         mnesarchum te sea. Vix at hinc iuvaret deserunt, ei eum noster
         mnesarchum. Mel prima eleifend interesset ei, Lorem ipsum dolor sit
         amet, ius in quot urbanitas, officiis aliquando mnesarchum te sea.
-    - image: /img/coffee-gear.png
+    - image: /img/1520.jpg
       text: >-
         Lorem ipsum dolor sit amet, ius in quot urbanitas, officiis aliquando
         mnesarchum te sea. Vix at hinc iuvaret deserunt, ei eum noster
         mnesarchum. Mel prima eleifend interesset ei
-    - image: /img/tutorials.png
+    - image: /img/1520.jpg
       text: >-
         Lorem ipsum dolor sit amet, ius in quot urbanitas, officiis aliquando
         mnesarchum te sea. Vix at hinc iuvaret deserunt, ei eum noster
         mnesarchum. Mel prima eleifend interesset ei, Lorem ipsum dolor sit
         amet, ius in quot urbanitas, officiis aliquando mnesarchum te sea.
-    - image: /img/meeting-space.png
+    - image: /img/1520.jpg
       text: >
         Lorem ipsum dolor sit amet, ius in quot urbanitas, officiis aliquando
         mnesarchum te sea. Vix at hinc iuvaret deserunt, ei eum noster
@@ -52,20 +52,20 @@ intro:
     urbanitas, officiis aliquando mnesarchum te sea. Vix at hinc iuvaret
     deserunt, ei eum noster mnesarchum. Mel prima eleifend interesset ei, 
 main:
-  heading: Great coffee with no compromises
+  heading: Lorem ipsum dolor sit amet
   description: >-
     Lorem ipsum dolor sit amet, ius in quot urbanitas, officiis aliquando
     mnesarchum te sea. Vix at hinc iuvaret deserunt, ei eum noster mnesarchum.
     Mel prima eleifend interesset ei, Lorem ipsum dolor sit amet, ius in quot
     urbanitas, officiis aliquando mnesarchum te sea.
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    alt: Lorem ipsum dolor sit amet
+    image: /img/2472596.jpg
   image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    alt: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit'
+    image: /img/2472596.jpg
   image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
+    alt: 'Lorem ipsum dolor sit amet, Lorem ipsum'
+    image: /img/2472596.jpg
 ---
 
