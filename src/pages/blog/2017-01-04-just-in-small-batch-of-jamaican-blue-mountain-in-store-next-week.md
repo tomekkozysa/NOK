@@ -8,7 +8,7 @@ description: >-
   prima eleifend interesset ei, et intellegat disputationi sed. Ut nec nonumes
   suavitate disputationi. Sea eu tantas facete scriptorem, laudem possim
   tractatos eu sed, an libris inermis theophrastus has.
-featuredpost: false
+featuredpost: true
 featuredimage: /img/1520.jpg
 tags:
   - jamaica
