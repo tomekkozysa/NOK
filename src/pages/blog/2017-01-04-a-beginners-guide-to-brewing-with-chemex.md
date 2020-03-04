@@ -13,7 +13,7 @@ tags:
   - brewing
   - chemex
 ---
-![Lorem ipsum](/img/chemex.jpg "Lorem ipsum dolor sit ame")
+![Lorem ipsum](/img/1520.jpg "Lorem ipsum dolor sit ame")
 
 Lorem ipsum dolor sit amet, ius in quot urbanitas, officiis aliquando mnesarchum te sea. Vix at hinc iuvaret deserunt, ei eum noster mnesarchum. Mel prima eleifend interesset ei, et intellegat disputationi sed. Ut nec nonumes suavitate disputationi. Se
 
