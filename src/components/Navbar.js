@@ -49,13 +49,13 @@ const Navbar = class extends React.Component {
             <b>X</b>
           </button>
           <Link className="sidebarLink" to="/">
-            Why NextofKIN?
+            NextofKIN?
           </Link>
           {/* <Link className="sidebarLink" to="/products">
             Products
           </Link> */}
           <Link className="sidebarLink" to="/blog">
-            Latest Stories
+            Stories
           </Link>
           <Link className="sidebarLink" to="/contact">
             Contact
