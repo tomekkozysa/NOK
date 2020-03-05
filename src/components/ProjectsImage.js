@@ -4,14 +4,14 @@ import Img from "gatsby-image";
 import "./Features.css";
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: "5px" };
+  // const imageStyle = { borderRadius: '5px' }
   const { alt = "", childImageSharp, image } = imageInfo;
 
   if (!!image && !!image.childImageSharp) {
     return (
       <Img
-        style={imageStyle}
-        // className="projectPic"
+        // style={imageStyle}
+        className="projectsImage"
         fluid={image.childImageSharp.fluid}
         alt={alt}
       />
@@ -21,8 +21,8 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   if (!!childImageSharp) {
     return (
       <Img
-        style={imageStyle}
-        // className="projectPic"
+        // style={imageStyle}
+        className="projectsImage"
         fluid={childImageSharp.fluid}
         alt={alt}
       />
@@ -32,8 +32,8 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   if (!!image && typeof image === "string")
     return (
       <img
-        style={imageStyle}
-        // className="projectPic"
+        // style={imageStyle}
+        className="projectsImage"
         src={image}
         alt={alt}
       />
