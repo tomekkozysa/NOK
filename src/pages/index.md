@@ -2,7 +2,7 @@
 templateKey: index-page
 title: NEXT of Kin
 image: /img/7173.jpg
-heading: When picture talk
+heading: 'Scocial, Long form, Commercial'
 subheading: shooting videos that stay in memory
 mainpitch:
   title: Why KIN
