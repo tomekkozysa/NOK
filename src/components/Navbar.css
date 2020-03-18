@@ -1,24 +1,28 @@
+:root {
+  --ff-primary: ;
+  --fs-hero: 6vw;
+  --fs-section-headline: 3vw;
+  --fs-navigation: 2.5vw;
+  --fs-body: 2vw;
+  --c-primary: rgb(168, 28, 28);
+  --c-text: black;
+  --c-secondary: black;
+  --c-secondary-accent: white;
+  --header-height: 6vw;
+  --header-width: ;
+  --c-header: black;
+}
+
 .navLine {
   width: 100%;
-  background-color: #111;
-}
-.openbtnTransparent {
-  font-size: 30px;
-  background-color: Transparent;
-  cursor: pointer;
-  color: black;
-  padding: 10px 15px;
-  border: none;
-  text-align: left;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: var(--c-header);
+  height: --header-height;
 }
 .openbtn {
-  font-size: 25px;
-  background-color: #111;
+  font-size: var(--fs-navigation);
+  background-color: var(--c-header);
   cursor: pointer;
-  color: white;
+  color: var(--c-secondary-accent);
   padding: 5px 10px;
   margin: 10px 10px;
   border: none;
@@ -34,8 +38,12 @@
 .openbtn:focus {
   outline: 0;
 }
+.navLog {
+  float: right;
+  margin-right: 45%;
+}
 .sidebar .sidebarLink:hover {
-  color: #f1f1f1;
+  color: var(--c-secondary-accent);
 }
 
 .sidebar .closebtn {
@@ -62,7 +70,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: var(--c-header);
   overflow-x: hidden;
 }
 .is-active {
