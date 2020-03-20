@@ -2,35 +2,52 @@
   --ff-primary: ;
   --fs-hero: 6vw;
   --fs-section-headline: 3vw;
-  --fs-navigation: 2.5vw;
+  --fs-navigation: 35px;
   --fs-body: 2vw;
-  --c-primary: rgb(168, 28, 28);
+  --c-primary: #a0191e;
   --c-text: black;
-  --c-secondary: black;
+  --c-secondary: #000105;
   --c-secondary-accent: white;
-  --header-height: 6vw;
+  --header-height: 55px;
   --header-width: ;
-  --c-header: black;
+  --c-header: #c4c4c4;
 }
-
 .navLine {
   width: 100%;
   background-color: var(--c-header);
-  height: --header-height;
+  height: var(--header-height);
 }
 .openbtn {
   font-size: var(--fs-navigation);
   background-color: var(--c-header);
   cursor: pointer;
-  color: var(--c-secondary-accent);
+  color: var(--c-primary);
   padding: 5px 10px;
-  margin: 10px 10px;
+  position: absolute;
+  right: 3px;
   border: none;
-  text-align: left;
 }
-.openbtn:hover {
+.closbtn {
+  font-size: var(--fs-navigation);
+  background-color: var(--c-header);
   cursor: pointer;
+  color: var(--c-primary);
+  padding: 5px 10px;
+  position: absolute;
+  right: 3px;
+  border: none;
 }
+.blockDiv {
+  display: block;
+}
+.closbtn:active {
+  outline: none;
+  border: none;
+}
+.closbtn:focus {
+  outline: 0;
+}
+
 .openbtn:active {
   outline: none;
   border: none;
@@ -40,24 +57,26 @@
 }
 .navLog {
   float: right;
-  margin-right: 47%;
+  margin-right: calc(50% - 35px);
+  height: var(--header-height);
+  padding-bottom: -2px;
 }
 .sidebar .sidebarLink:hover {
-  color: var(--c-secondary-accent);
+  color: var(--c-secondary);
 }
 
-.sidebar .closebtn {
+/* .sidebar .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
-}
+} */
 .sidebar .sidebarLink {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: var(--c-primary);
   display: block;
   transition: ease 0.5s;
 }
@@ -69,14 +88,14 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: var(--c-header);
   overflow-x: hidden;
 }
 .is-active {
   width: 250px;
 }
-.socialIcons {
+/* .socialIcons {
   background-color: Transparent;
   border: none;
   position: absolute;
@@ -94,7 +113,7 @@
   height: 1em;
   vertical-align: middle;
   display: inline;
-}
+} */
 @media screen and (max-height: 450px) {
   .sidebar {
     padding-top: 15px;

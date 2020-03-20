@@ -43,9 +43,10 @@ const Navbar = class extends React.Component {
           >
             ×
           </a> */}
-          <button className="openbtn" onClick={() => this.toggleHamburger()}>
-            <b>X</b>
+          <button className="closbtn" onClick={() => this.toggleHamburger()}>
+            <b>x</b>
           </button>
+          <br />
           <Link className="sidebarLink" to="/">
             NextofKIN?
           </Link>
@@ -63,9 +64,6 @@ const Navbar = class extends React.Component {
           </Link>
         </div>
         <div className="navLine">
-          <button className="openbtn" onClick={() => this.toggleHamburger()}>
-            ☰
-          </button>
           <div className="navLog">
             <svg
               max-width="70"
@@ -98,6 +96,9 @@ const Navbar = class extends React.Component {
               </g>
             </svg>
           </div>
+          <button className="openbtn" onClick={() => this.toggleHamburger()}>
+            <b>+</b>
+          </button>
         </div>
       </div>
     );
