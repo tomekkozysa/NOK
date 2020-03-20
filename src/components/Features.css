@@ -1,13 +1,36 @@
-/* .project {
-  width: 100%;
-  margin-top: 20px;
+/* .ImageElement {
+  position: relative;
+  top: -2vw;
+  left: -2vw;
+  box-shadow: 2vw 2vw firebrick;
 } */
-.projectsImage {
-  max-width: 100%;
-  border-radius: 5px;
+.projectsImageLeft {
+  position: relative;
+  top: -2vw;
+  left: -2vw;
+}
+.projectsImageRight {
+  position: relative;
+  top: -2vw;
+  left: 2vw;
 }
 
-.projectsImage::after {
+.projectText {
+  padding: 2vw;
+}
+.project {
+  box-sizing: border-box;
+  background-color: firebrick;
+  display: grid;
+  /* grid-template-columns: 50% 50%; */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 0px;
+  justify-content: center;
+  margin: 2vw 2vw 4vw 2vw;
+}
+
+/* this class add linear gradient to the image */
+/* .projectsImage::after {
   display: block;
   position: relative;
   background-image: linear-gradient(
@@ -19,16 +42,4 @@
   height: 150px;
   width: 100%;
   content: "";
-}
-
-/* .projectText {
 } */
-.project {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  grid-gap: 10px;
-  /* background-color: #2196f3; */
-  margin-bottom: 10em;
-  /* padding: 10px; */
-  justify-content: center;
-}

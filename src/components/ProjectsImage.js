@@ -11,7 +11,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     return (
       <Img
         // style={imageStyle}
-        className="projectsImage"
+        className="ImageElement"
         fluid={image.childImageSharp.fluid}
         alt={alt}
       />

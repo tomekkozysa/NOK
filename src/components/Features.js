@@ -5,20 +5,27 @@ import "./Features.css";
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="">
-    {gridItems.map(item => (
-      <div key={item.text} className="project">
-        {/* <section className=""> */}
-        {/* <div className=""> */}
-        <div className="">
-          <PreviewCompatibleImage imageInfo={item} />
+    {gridItems.map(item =>
+      gridItems.indexOf(item) % 2 == 0 ? (
+        <div key={item.text} className="project">
+          <div className="projectsImageLeft">
+            <PreviewCompatibleImage imageInfo={item} />
+          </div>
+          <div className="projectText">
+            <p>{item.text}</p>
+          </div>
         </div>
-        {/* </div> */}
-        <div className="projectText">
-          <p>{item.text}</p>
+      ) : (
+        <div key={item.text} className="project">
+          <div className="projectText">
+            <p>{item.text}</p>
+          </div>
+          <div className="projectsImageRight">
+            <PreviewCompatibleImage imageInfo={item} />
+          </div>
         </div>
-        {/* </section> */}
-      </div>
-    ))}
+      )
+    )}
   </div>
 );
 

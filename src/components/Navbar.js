@@ -68,7 +68,7 @@ const Navbar = class extends React.Component {
           </button>
           <div className="navLog">
             <svg
-              width="70"
+              max-width="70"
               height="56"
               viewBox="0 0 70 56"
               fill="none"
