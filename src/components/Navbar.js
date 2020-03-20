@@ -47,6 +47,7 @@ const Navbar = class extends React.Component {
             <b>x</b>
           </button>
           <br />
+          <br />
           <Link className="sidebarLink" to="/">
             NextofKIN?
           </Link>
