@@ -1,6 +1,6 @@
 :root {
   --ff-primary: ;
-  --fs-hero: 6vw;
+  --fs-hero: 35px;
   --fs-section-headline: 20px;
   --fs-navigation: 35px;
   --fs-body: 2vw;
@@ -37,8 +37,8 @@
   right: 3px;
   border: none;
 }
-.blockDiv {
-  display: block;
+.brightX {
+  box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
 }
 .closbtn:active {
   outline: none;
@@ -46,6 +46,10 @@
 }
 .closbtn:focus {
   outline: 0;
+}
+.closbtn:hover {
+  text-shadow: 0 0 3px var(--c-primary), 0 0 3px var(--c-secondary);
+  color: var(--c-secondary);
 }
 
 .openbtn:active {
@@ -55,14 +59,28 @@
 .openbtn:focus {
   outline: 0;
 }
+.openbtn:hover {
+  text-shadow: 0 0 3px var(--c-primary), 0 0 3px var(--c-secondary);
+  color: var(--c-secondary);
+}
 .navLog {
   float: right;
   margin-right: calc(50% - 35px);
   height: var(--header-height);
   padding-bottom: -2px;
+  cursor: pointer;
+}
+.navLog:hover {
+  -webkit-filter: drop-shadow(12px 12px 7px var(--c-secondary));
+  filter: drop-shadow(12px 12px 7px var(--c-secondary));
+}
+
+.navLog:hover {
+  text-shadow: 0 0 3px var(--c-primary), 0 0 3px var(--c-secondary);
 }
 .sidebar .sidebarLink:hover {
   color: var(--c-secondary);
+  text-shadow: 0 0 3px var(--c-primary), 0 0 3px var(--c-secondary);
 }
 
 /* .sidebar .closebtn {
