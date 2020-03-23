@@ -2,7 +2,17 @@
 templateKey: about-page
 title: About our values
 ---
-![](/img/1520.jpg)
+Some text for Picture 1, Lorem ipsum dolor sit amet, ius in quot urbanitas, officiis aliquando mnesarchum te sea. Vix at hinc iuvaret deserunt, ei eum noster
+
+![Alt text1](/img/1520.jpg "title1")
+
+
+
+
+
+Some Text2, mnesarchum. Mel prima eleifend interesset ei, Lorem ipsum dolor. mnesarchum. Mel prima eleifend interesset ei, Lorem ipsum dolor
+
+![Alt Text2](/img/atharva-dharmadhikari-5BfGbCu_gVM-unsplash.jpg "Title2")
 
 ### Next Of Kin
 
