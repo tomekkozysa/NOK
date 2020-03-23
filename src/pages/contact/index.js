@@ -1,8 +1,13 @@
 import React from "react";
-import { navigate } from "gatsby-link";
 import Layout from "../../components/Layout";
 import "./contact.css";
-// import { Link } from "gatsby";
+import conatctImage from "../../../static/img/contact.jpg";
+import facebook from "../../img/social/facebook.svg";
+import instagram from "../../img/social/instagram.svg";
+import twitter from "../../img/social/twitter.svg";
+import vimeo from "../../img/social/vimeo.svg";
+import youtube from "../../img/social/youtube.svg";
+import linkedin from "../../img/social/linkedin.svg";
 
 function encode(data) {
   return Object.keys(data)
@@ -19,54 +24,69 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1>Contact</h1>
-              <div className="content ">
-                <div className="container ">
-                  <div className="columns">
-                    <div className="column is-4">
-                      <div className="contact">
-                        <h1>Next Of Kin</h1>
-                        <address className="address">
-                          The Green House<br></br>
-                          244-254 Cambridge Heath Rd<br></br>
-                          London<br></br>
-                          E2 9DA<br></br>
-                        </address>
-                        <a href="mailto:info@nextofkin.com">
-                          info@nextofkin.com
-                        </a>
-                        <br></br>
-                        <a href="tel:+442035596554">+44 20 355 96554</a>
-                      </div>
-                    </div>
-
-                    <div className="column is-4 contact">
-                      <br></br>
-                      <br></br>
-                      Name Surname<br></br>
-                      Executive Producer<br></br>
-                      <a href="mailto:info@nextofkin.com">
-                        someone@nextofkin.com
-                      </a>
-                      <br></br>
-                    </div>
-                    <div className="column is-4 contact">
-                      <br></br>
-                      <br></br>
-                      Name Surname <br></br>
-                      Managing Partner<br></br>
-                      <a href="mailto:info@nextofkin.com">name@nextofkin.com</a>
-                      <br></br>
-                    </div>
-                  </div>
-                </div>
+        <div className="contactMain">
+          <h1 className="contactHeader">Contact</h1>
+          <div className="gridContact">
+            <div className="socialInfo">
+              <a href="tel:+442035596554">+44 20 355 96554</a>
+              <br />
+              <br />
+              <a href="mailto:info@nextofkin.com">someone@nextofkin.com</a>
+              <br />
+              <br />
+              <address className="address">
+                The Green House<br></br>
+                244-254 Cambridge Heath Rd<br></br>
+                London<br></br>
+                E2 9DA<br></br>
+              </address>
+            </div>
+            <div className="socialPic">
+              <img src={conatctImage} alt="office Building" />
+            </div>
+          </div>
+          <h1 className="contactHeader">Social</h1>
+          <div className="gridContact">
+            <div className="socialIcons">
+              <div className="socialIcon">
+                <a title="facebook" href="https://facebook.com">
+                  <img className="socialImag" src={facebook} alt="Facebook" />{" "}
+                  Facebook
+                </a>
+              </div>
+              <div className="socialIcon">
+                <a title="twitter" href="https://twitter.com">
+                  <img className="socialImag" src={twitter} alt="Twitter" />
+                  {"   "}
+                  Twitter
+                </a>
+              </div>
+              <div className="socialIcon">
+                <a title="instagram" href="https://instagram.com">
+                  <img className="socialImag" src={instagram} alt="Instagram" />{" "}
+                  Instagram
+                </a>
+              </div>
+              <div className="socialIcon">
+                <a title="vimeo" href="https://vimeo.com">
+                  <img className="socialImag" src={vimeo} alt="Vimeo" /> Vimeo
+                </a>
+              </div>
+              <div className="socialIcon">
+                <a title="youtube" href="https://youtube.com">
+                  <img className="socialImag" src={youtube} alt="Youtube" />{" "}
+                  Youtube
+                </a>
+              </div>
+              <div className="socialIcon">
+                <a title="linkedin" href="https://linkedin.com">
+                  <img className="socialImag" src={linkedin} alt="Linkedin" />{" "}
+                  Linkedin
+                </a>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </Layout>
     );
   }

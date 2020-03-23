@@ -1,7 +1,84 @@
+:root {
+  --ff-primary: "Roboto Mono";
+  --fs-hero: 32px;
+  --fs-section-headline: 20px;
+  --fs-navigation: 35px;
+  --fs-body: 18px;
+  --c-primary: #a0191e;
+  --c-text: #000105;
+  --c-secondary: #000105;
+  --c-secondary-accent: white;
+  --header-height: 55px;
+  --header-width: 100%;
+  --c-header: #c4c4c4;
+}
+.contactMain {
+  margin: 4vw;
+  color: var(--c-primary);
+}
+.contactHeader {
+  margin-left: 4vw;
+  font-size: var(--fs-hero);
+}
 .address {
   display: block;
   font-style: italic;
+  cursor: pointer;
+}
+.address:hover {
+  text-shadow: 0 0 3px var(--c-primary), 0 0 3px var(--c-secondary);
+  color: var(--c-secondary);
 }
 .contact {
   margin-top: 10rem;
+}
+
+.gridContact {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 0px;
+  justify-content: center;
+  align-items: center;
+  margin: 0vw 4vw 2vw 4vw;
+}
+.socialPic {
+  max-width: 450px;
+}
+.socialInfo {
+  padding-top: 2em;
+}
+.socialInfo a {
+  color: var(--c-primary);
+}
+.socialInfo a:hover {
+  text-shadow: 0 0 3px var(--c-primary), 0 0 3px var(--c-secondary);
+  color: var(--c-secondary);
+}
+.socialIcons {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.socialIcons a {
+  padding: 0.5em 0.5em 0.3em 0.5em;
+  border-radius: 1em;
+  /* background-color: var(--c-header); */
+  /* margin: 0.5em; */
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  /* display: inline; */
+  color: var(--c-primary);
+}
+.socialIcons a:hover {
+  text-shadow: 0 0 3px var(--c-primary), 0 0 3px var(--c-secondary);
+  color: var(--c-secondary);
+}
+.socialIcon {
+  margin-bottom: 2vw;
+}
+.socialImag {
+  width: 1em;
+  height: 1em;
 }
