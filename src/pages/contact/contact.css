@@ -13,7 +13,7 @@
   --c-header: #c4c4c4;
 }
 .contactMain {
-  margin: 4vw;
+  margin: 40px;
   color: var(--c-primary);
 }
 .contactHeader {
