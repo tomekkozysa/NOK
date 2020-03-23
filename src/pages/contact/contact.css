@@ -44,11 +44,11 @@
 }
 .socialPic {
   max-width: 450px;
-  padding-left: 2em;
+  padding-left: 20px;
 }
 .socialInfo {
   padding-top: 2em;
-  padding-left: 2em;
+  padding-left: 20px;
 }
 .socialInfo a {
   color: var(--c-primary);
@@ -58,7 +58,7 @@
   color: var(--c-secondary);
 }
 .socialIcons {
-  padding: 2em;
+  padding: 20px;
 }
 
 .socialIcons a {
