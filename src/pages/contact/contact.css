@@ -44,9 +44,11 @@
 }
 .socialPic {
   max-width: 450px;
+  padding-left: 2em;
 }
 .socialInfo {
   padding-top: 2em;
+  padding-left: 2em;
 }
 .socialInfo a {
   color: var(--c-primary);
@@ -56,8 +58,7 @@
   color: var(--c-secondary);
 }
 .socialIcons {
-  padding-bottom: 2em;
-  padding-top: 2em;
+  padding: 2em;
 }
 
 .socialIcons a {
@@ -81,4 +82,9 @@
 .socialImag {
   width: 1em;
   height: 1em;
+}
+@media screen and (max-width: 450px) {
+  .socialPic {
+    max-width: 300px;
+  }
 }
