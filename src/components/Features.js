@@ -11,14 +11,28 @@ const FeatureGrid = ({ gridItems }) => (
           <div className="projectsImageLeft">
             <PreviewCompatibleImage imageInfo={item} />
           </div>
-          <div className="projectText">
-            <p>{item.text}</p>
+          <div className="projectInfo">
+            <div className="closeLineLeft">
+              <button className="closbtnProjectLeft">
+                <b>x</b>
+              </button>
+            </div>
+            <div className="projectTextLeft">
+              <p>{item.text}</p>
+            </div>
           </div>
         </div>
       ) : (
         <div key={item.text} className="project">
-          <div className="projectText">
-            <p>{item.text}</p>
+          <div className="projectInfo">
+            <div className="closeLineRight">
+              <button className="closbtnProjectRight">
+                <b>x</b>
+              </button>
+            </div>
+            <div className="projectTextRight">
+              <p>{item.text}</p>
+            </div>
           </div>
           <div className="projectsImageRight">
             <PreviewCompatibleImage imageInfo={item} />
