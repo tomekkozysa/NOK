@@ -34,12 +34,17 @@ export default class Index extends React.Component {
               <a href="mailto:info@nextofkin.com">someone@nextofkin.com</a>
               <br />
               <br />
-              <address className="address">
-                The Green House<br></br>
-                244-254 Cambridge Heath Rd<br></br>
-                London<br></br>
-                E2 9DA<br></br>
-              </address>
+              <a
+                href="https://www.google.co.uk/maps/place/Code+Your+Future/@51.5329326,-0.0591323,17z/data=!3m1!4b1!4m5!3m4!1s0x48761dd12bb927a3:0xf3e50cf1e0d3a1a4!8m2!3d51.5329326!4d-0.0569436"
+                target="_blank"
+              >
+                <address className="address">
+                  The Green House<br></br>
+                  244-254 Cambridge Heath Rd<br></br>
+                  London<br></br>
+                  E2 9DA<br></br>
+                </address>
+              </a>
             </div>
             <div className="socialPic">
               <img src={conatctImage} alt="office Building" />
