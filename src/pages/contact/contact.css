@@ -94,7 +94,7 @@
 }
 @media screen and (max-width: 450px) {
   .socialPic {
-    max-width: 300px;
+    width: 300px;
   }
   .gridContactItem {
     margin: auto;
