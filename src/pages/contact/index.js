@@ -50,7 +50,7 @@ export default class Index extends React.Component {
             </div>
             <div className="gridContactItem">
               <div className="socialPic">
-                <img src={conatctImage} alt="office Building" />
+                {/* <img src={conatctImage} alt="office Building" /> */}
               </div>
             </div>
           </div>

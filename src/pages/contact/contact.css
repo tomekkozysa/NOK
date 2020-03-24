@@ -11,6 +11,7 @@
   --header-height: 55px;
   --header-width: 100%;
   --c-header: #c4c4c4;
+  --c-linear: linear-gradient(180deg, #e47f54 0%, #e2719f 100%);
 }
 .contactMain {
   margin: 40px;
@@ -42,9 +43,18 @@
   align-items: center;
   margin: 0vw 4vw 2vw 4vw;
 }
+
 .socialPic {
   max-width: 450px;
+  height: 300px;
   padding-left: 20px;
+  background-image: url(../../../static/img/contact.jpg);
+  /* background: linear-gradient(180deg, #e47f54 0%, #e2719f 100%); */
+  background-color: #e47f54;
+  background-blend-mode: multiply;
+  background-size: cover;
+  overflow: hidden;
+  filter: drop-shadow(8px 8px 10px gray);
 }
 .socialInfo {
   padding-top: 2em;
