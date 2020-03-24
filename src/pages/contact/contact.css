@@ -48,7 +48,6 @@
 }
 .socialInfo {
   padding-top: 2em;
-  padding-left: 20px;
 }
 .socialInfo a {
   color: var(--c-primary);
@@ -58,7 +57,7 @@
   color: var(--c-secondary);
 }
 .socialIcons {
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .socialIcons a {
@@ -86,5 +85,8 @@
 @media screen and (max-width: 450px) {
   .socialPic {
     max-width: 300px;
+  }
+  .gridContactItem {
+    margin: auto;
   }
 }
