@@ -1,0 +1,50 @@
+.about-page{
+
+    max-width:var(--layout-maxw);
+    margin:var(--layout-mt) auto 0;
+    color:var(--c-primary);
+    padding:5vh 40px;
+}
+
+
+.about-page-title{
+    font-size:var(--fs-section-headline);
+}
+
+
+.about-page-intro{
+  
+}
+.about-page-profiles{
+    margin-top:10vh;
+}
+
+.about-page-profile:nth-child(even){
+    flex-direction: row-reverse;
+}
+.about-page-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:60vh;
+
+}
+
+
+.profile-img-wrapper{
+    flex:2 1;
+}
+.profile-img{
+    
+    width:400px;
+    height:auto;
+    display: block;
+    
+}
+
+.about-page-profile-text{
+    flex:2 1;
+}
+.about-page-profile-text-copy{
+    padding:2em;
+}
