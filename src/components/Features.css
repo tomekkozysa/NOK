@@ -1,17 +1,4 @@
-:root {
-  --ff-primary: "Roboto Mono";
-  --fs-hero: 32px;
-  --fs-section-headline: 20px;
-  --fs-navigation: 35px;
-  --fs-body: 18px;
-  --c-primary: #a0191e;
-  --c-text: #000105;
-  --c-secondary: #000105;
-  --c-secondary-accent: white;
-  --header-height: 55px;
-  --header-width: 100%;
-  --c-header: #c4c4c4;
-}
+
 /* .ImageElement {
   position: relative;
   top: -2vw;
