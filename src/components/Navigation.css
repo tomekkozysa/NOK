@@ -1,0 +1,30 @@
+.navigation{
+    background:var(--c-secondary);
+    position: fixed;
+    z-index:4999; /* logo and nav button at z-index:5000*/
+    top:-100vh;
+    right:0;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:top .29s;
+}
+
+.navigation.is_active{
+    right:0;top:0;
+}
+.navigation-list{
+    text-align: center;
+}
+.navigation-list-item{}
+.navigation-list-link{
+    color:var(--c-secondary-accent);
+    font-size: var( --fs-navigation);
+}
+.navigation-list-link:hover{
+    color:var(--c-primary);
+    /* font-size: var( --fs-navigation); */
+}
