@@ -5,6 +5,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
+import Hero from "../components/Hero";
 import "./index-page.css";
 
 export const IndexPageTemplate = ({
@@ -17,99 +18,60 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column"
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            // boxShadow:
-            //   "rgb(232, 226, 211) 0.5rem 0px 0px, rgb(232, 226, 211) -0.5rem 0px 0px",
-            // backgroundColor: "rgb(232, 226, 211)",
-            color: "Black",
-            lineHeight: "1"
-            // padding: "0.25em"
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            // boxShadow:
-            //   "rgb(232, 226, 211) 0.5rem 0px 0px, rgb(232, 226, 211) -0.5rem 0px 0px",
-            // backgroundColor: "rgb(232, 226, 211)",
-            color: "black",
-            lineHeight: "1",
-            padding: "0.25em"
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
+    
+    <section className="home-page">
+<Hero />
+<section className="home-page-projects">
+
+  <div className="home-page-projects-filter">
+  <h2 className="projects-filter-headline">Our work</h2>
+    <ul className="projects-filter-items">
+      <li className="projects-filter-item">
+        Commercial
+      </li>
+      <li className="projects-filter-item">
+        Social
+      </li>
+      <li className="projects-filter-item">
+        Long form
+      </li>
+    </ul>
+  </div>
+
+
+  <div className="nok-project isnot_expanded">
+    <div className="project-img-wrapper">
+      <img className="project-img" src={'/img/img1.png'} alt="Project featured image alt text" />
     </div>
-    <section className="">
-      <div className="">
-        <div className="">
-          <div className="">
-            <div className="">
-              <div className="">
-                {/* <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div> */}
-                <div className="">
-                  <div className="projectsCatacoriesTitle">
-                    <h3 className="">{heading}</h3>
-                    {/* <p>{description}</p> */}
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See more
-                    </Link>
-                  </div>
-                </div>
-                {/* <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div> */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div className="nok-project-text">
+      <p className="nok-project-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    </div>
+  </div>
+
+  <div className="nok-project isnot_expanded">
+    <div className="project-img-wrapper">
+      <img className="project-img" src={'/img/img2.png'} alt="Project featured image alt text" />
+    </div>
+    <div className="nok-project-text">
+    <p className="nok-project-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    </div>
+  </div>
+
+
+  <div className="nok-project isnot_expanded">
+    <div className="project-img-wrapper">
+      <img className="project-img" src={'/img/img3.png'} alt="Project featured image alt text" />
+    </div>
+    <div className="nok-project-text">
+    <p className="nok-project-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    </div>
+  </div>
+
+</section>
+
+  </section>
+
+
   </div>
 );
 
@@ -128,6 +90,7 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
+ 
   return (
     <Layout>
       <IndexPageTemplate
@@ -141,6 +104,9 @@ const IndexPage = ({ data }) => {
       />
     </Layout>
   );
+
+
+  
 };
 
 IndexPage.propTypes = {
@@ -154,7 +120,7 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
+  query IndexPageTemplateX {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title

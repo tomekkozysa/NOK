@@ -1,8 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 // import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+
 import "./all.sass";
+import "./global.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
@@ -38,18 +40,28 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
-        <meta name="theme-color" content="#fff" />
 
+        <meta name="theme-color" content="#fff" />
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content={`${withPrefix("/")}img/og-image.jpg`}
+        <meta property="og:image" 
+        
+        
+        content={`${withPrefix("/")}img/og-image.jpg`}
         />
+
+        
+
+
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
+
+      <Header />
+      
+      <div className="layout-content">
+        {children}
+        
+      </div>
       {/* <Footer /> */}
     </div>
   );
