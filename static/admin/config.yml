@@ -30,10 +30,11 @@ collections:
 
   - name: "products"
     label: "Our work"
-    folder: "src/pages/products/index.md"
+    folder: "src/pages/products"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
