@@ -29,8 +29,8 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "products"
-    label: "our work"
-    folder: "src/pages/products"
+    label: "Our work"
+    folder: "src/pages/products/index.md"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
