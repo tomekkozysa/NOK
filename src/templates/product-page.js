@@ -36,7 +36,7 @@ export const ProductPageTemplate = ({
             padding: "1rem"
           }}
         >
-          {title}
+          {/* {title} */}
         </h2>
       </div>
       <section className="section section--gradient">
@@ -106,7 +106,7 @@ export const ProductPageTemplate = ({
 
 ProductPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
+  // title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
   // intro: PropTypes.shape({
@@ -135,7 +135,7 @@ const ProductPage = ({ data }) => {
     <Layout>
       <ProductPageTemplate
         image={frontmatter.image}
-        title={frontmatter.title}
+        // title={frontmatter.title}
         heading={frontmatter.heading}
         description={frontmatter.description}
         // intro={frontmatter.intro}
@@ -162,7 +162,6 @@ export const productPageQuery = graphql`
   query ProductPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
