@@ -8,35 +8,35 @@ import "./about.css";
 
 
 
-// export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
-//   const PageContent = contentComponent || Content;
+  const PageContent = contentComponent || Content;
 
-//   return (
-//     <section className="about-page">
-      
-//       <h2 className="about-page-title">
-//                 {title}
-//       </h2>
+  return (
+    <section className="about-page">
 
-//       <div class="about-page-intro">
-//         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-//         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-//       </div>
+      <h2 className="about-page-title">
+        {title}
+      </h2>
 
-
-//       {/* <PageContent className="about-page-content" content={content} /> */}
+      <div class="about-page-intro">
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      </div>
 
 
-//     </section>
-//   );
-// };
+      {/* <PageContent className="about-page-content" content={content} /> */}
 
-// AboutPageTemplate.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   content: PropTypes.string,
-//   contentComponent: PropTypes.func
-// };
+
+    </section>
+  );
+};
+
+AboutPageTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func
+};
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
@@ -44,55 +44,55 @@ const AboutPage = ({ data }) => {
     <Layout>
 
 
-<section className="about-page">
-      
-      <h2 className="about-page-title">
-               About
+      <section className="about-page">
+
+        <h2 className="about-page-title">
+          About
       </h2>
 
-      <div className="about-page-intro">
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-      </div>
-
-      <div className="about-page-profiles">
-        
-        <div className="about-page-profile">
-          <div className="profile-img-wrapper">
-            <img className="profile-img" src={'/img/gr-orange-pink.png'} alt="Logo" />
-          </div>
-          <div className="about-page-profile-text">
-          <p className="about-page-profile-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          </div>
+        <div className="about-page-intro">
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
 
-        <div className="about-page-profile">
-          <div className="profile-img-wrapper">
-            <img className="profile-img" src={'/img/gr-orange-pink.png'} alt="Logo" />
+        <div className="about-page-profiles">
+
+          <div className="about-page-profile">
+            <div className="profile-img-wrapper">
+              <img className="profile-img" src={'/img/gr-orange-pink.png'} alt="Logo" />
+            </div>
+            <div className="about-page-profile-text">
+              <p className="about-page-profile-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
           </div>
-          <div className="about-page-profile-text">
-          <p className="about-page-profile-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+          <div className="about-page-profile">
+            <div className="profile-img-wrapper">
+              <img className="profile-img" src={'/img/gr-orange-pink.png'} alt="Logo" />
+            </div>
+            <div className="about-page-profile-text">
+              <p className="about-page-profile-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
           </div>
+
+          <div className="about-page-profile">
+            <div className="profile-img-wrapper">
+              <img className="profile-img" src={'/img/gr-orange-pink.png'} alt="Logo" />
+            </div>
+            <div className="about-page-profile-text">
+              <p className="about-page-profile-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+
+
         </div>
 
-        <div className="about-page-profile">
-          <div className="profile-img-wrapper">
-            <img className="profile-img" src={'/img/gr-orange-pink.png'} alt="Logo" />
-          </div>
-          <div className="about-page-profile-text">
-          <p className="about-page-profile-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          </div>
-        </div>
 
 
-      </div>
-      
-      
-
-    </section>
+      </section>
 
 
 
-      
+
 
 
     </Layout>
