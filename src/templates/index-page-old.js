@@ -16,62 +16,62 @@ export const IndexPageTemplate = ({
   description,
   intro
 }) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
-      }}
-    >
+    <div>
       <div
+        className="full-width-image margin-top-0"
         style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column"
+          backgroundImage: `url(${
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            })`,
+          backgroundPosition: `top left`,
+          backgroundAttachment: `fixed`
         }}
       >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+        <div
           style={{
-            // boxShadow:
-            //   "rgb(232, 226, 211) 0.5rem 0px 0px, rgb(232, 226, 211) -0.5rem 0px 0px",
-            // backgroundColor: "rgb(232, 226, 211)",
-            color: "Black",
-            lineHeight: "1"
-            // padding: "0.25em"
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            // boxShadow:
-            //   "rgb(232, 226, 211) 0.5rem 0px 0px, rgb(232, 226, 211) -0.5rem 0px 0px",
-            // backgroundColor: "rgb(232, 226, 211)",
-            color: "black",
+            display: "flex",
+            height: "150px",
             lineHeight: "1",
-            padding: "0.25em"
+            justifyContent: "space-around",
+            alignItems: "left",
+            flexDirection: "column"
           }}
         >
-          {subheading}
-        </h3>
+          <h1
+            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+            style={{
+              // boxShadow:
+              //   "rgb(232, 226, 211) 0.5rem 0px 0px, rgb(232, 226, 211) -0.5rem 0px 0px",
+              // backgroundColor: "rgb(232, 226, 211)",
+              color: "Black",
+              lineHeight: "1"
+              // padding: "0.25em"
+            }}
+          >
+            {title}
+          </h1>
+          <h3
+            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+            style={{
+              // boxShadow:
+              //   "rgb(232, 226, 211) 0.5rem 0px 0px, rgb(232, 226, 211) -0.5rem 0px 0px",
+              // backgroundColor: "rgb(232, 226, 211)",
+              color: "black",
+              lineHeight: "1",
+              padding: "0.25em"
+            }}
+          >
+            {subheading}
+          </h3>
+        </div>
       </div>
-    </div>
-    <section className="">
-      <div className="">
+      <section className="">
         <div className="">
           <div className="">
             <div className="">
               <div className="">
-                {/* <div className="content">
+                <div className="">
+                  {/* <div className="content">
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
@@ -79,21 +79,21 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
                 </div> */}
-                <div className="">
-                  <div className="projectsCatacoriesTitle">
-                    <h3 className="">{heading}</h3>
-                    {/* <p>{description}</p> */}
+                  <div className="">
+                    <div className="projectsCatacoriesTitle">
+                      <h3 className="">{heading}</h3>
+                      {/* <p>{description}</p> */}
+                    </div>
                   </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See more
+                  <Features gridItems={intro.blurbs} />
+                  <div className="columns">
+                    <div className="column is-12 has-text-centered">
+                      <Link className="btn" to="/products">
+                        See more
                     </Link>
+                    </div>
                   </div>
-                </div>
-                {/* <div className="column is-12">
+                  {/* <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
                     Latest stories
                   </h3>
@@ -104,14 +104,14 @@ export const IndexPageTemplate = ({
                     </Link>
                   </div>
                 </div> */}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-);
+      </section>
+    </div>
+  );
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -172,20 +172,7 @@ export const pageQuery = graphql`
           description
         }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
+        
       }
     }
   }
