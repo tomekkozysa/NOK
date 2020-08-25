@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-  repo: tomekkozysa/NOK
+  repo: kosenchiha/NOK
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
@@ -39,7 +39,6 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Category",
           name: "category",
