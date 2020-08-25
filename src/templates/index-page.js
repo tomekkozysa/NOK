@@ -14,10 +14,10 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-  products,
+  projects,
 }) => (
   <div>
-    {console.log("products in IndexPageTemplate", products)}
+    {console.log("products in IndexPageTemplate", projects)}
     <section className="home-page">
       <Hero />
       <section className="home-page-projects">
@@ -30,16 +30,16 @@ export const IndexPageTemplate = ({
           </ul>
         </div>
 
-        {products.map(({ frontmatter: product }, index) => (
+        {projects.map(({ frontmatter: project }, index) => (
           <div key={index} className="nok-project isnot_expanded">
             <div className="project-img-wrapper">
               <Img
-                fluid={product.image.childImageSharp.fluid}
-                alt={product.heading}
+                fluid={project.image.childImageSharp.fluid}
+                alt={project.heading}
               />
             </div>
             <div className="nok-project-text">
-              <p className="nok-project-text-copy">{product.description}</p>
+              <p className="nok-project-text-copy">{project.description}</p>
             </div>
           </div>
         ))}
@@ -62,9 +62,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  const products = data.products.nodes;
-  console.log(data);
-  console.log("products from querry", products);
+  const projects = data.projects.nodes;
 
   return (
     <Layout>
@@ -75,7 +73,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        products={products}
+        projects={projects}
         // intro={frontmatter.intro}
       />
     </Layout>
@@ -94,9 +92,9 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplateX {
-    products: allMarkdownRemark(
+    projects: allMarkdownRemark(
       sort: { order: DESC, fields: frontmatter___date }
-      filter: { fields: { slug: { regex: "/products/" } } }
+      filter: { fields: { slug: { regex: "/projects/" } } }
     ) {
       totalCount
       nodes {
@@ -106,7 +104,7 @@ export const pageQuery = graphql`
           heading
           image {
             childImageSharp {
-              fluid(maxWidth: 120, quality: 100) {
+              fluid(maxWidth: 120, quality: 100, grayscale: true) {
                 ...GatsbyImageSharpFluid
               }
             }
