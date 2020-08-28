@@ -89,6 +89,9 @@ const ProjectsSection = () => {
               />
             </div>
             <div className="nok-project-text">
+            <p className="nok-project-category">{project.category}</p>
+            <p className="nok-project-heading">{project.heading}</p>
+            
               <p className="nok-project-text-copy">{project.description}</p>
             </div>
           </div>

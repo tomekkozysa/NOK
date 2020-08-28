@@ -155,17 +155,28 @@
   display: block;
 }
 
+.nok-project-heading {
+  color: var(--c-primary);
+  font-size:var(--fs-project-heading);
+  padding:0;
+  line-height:1;
+}
+
+
 .nok-project-text {
   flex: 1 2 300px;
   height: var(--exp-height);
   /* color:var(--c-text-secondary); */
   color: var(--c-primary);
   align-self: flex-end;
-  padding-left: 2em;
+  padding:0 2em;
 }
 
+
+
 .nok-project-text-copy {
-  padding: 0 1em 2em;
+  /* padding: 0 1em 2em; */
+  padding:1em 0 ;
 }
 .nok-project:nth-child(even) .nok-project-text-copy {
   /* padding-left:5em; */
