@@ -9,5 +9,7 @@ pageCopy:
       text: this is box2
     - image: /img/sharegrid-N10auyEVst8-unsplash.jpg
       text: this is box3
+    - image: /img/contact.jpg
+      text: this is box4
 ---
 
