@@ -114,29 +114,5 @@ export const aboutPageQuery = graphql`
         title
       }
     }
-      allMarkdownRemark(filter: {fields: {slug: {regex: "/about/"}}}) {
-    edges {
-      node {
-        id
-        frontmatter {
-          description
-          featuredimage {
-            childImageSharp {
-              fluid(maxWidth: 2024, quality: 100) {
-                base64
-                tracedSVG
-                srcWebp
-                srcSetWebp
-                originalImg
-                originalName
-                presentationWidth
-                presentationHeight
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
 `;
