@@ -37,8 +37,9 @@ AboutPageTemplate.propTypes = {
   content: PropTypes.string,
   contentComponent: PropTypes.func
 };
-const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+const AboutPage = (props) => {
+  console.log(props)
+  // const { markdownRemark: post } = props.data;
 
   return (
     <Layout>
@@ -113,5 +114,51 @@ export const aboutPageQuery = graphql`
         title
       }
     }
+      allMarkdownRemark(filter: {fields: {slug: {regex: "/about/"}}}) {
+    edges {
+      node {
+        id
+        frontmatter {
+          main {
+            heading
+            description
+            image1 {
+              image {
+                childImageSharp {
+                  original {
+                    width
+                    height
+                    src
+                  }
+                }
+              }
+            }
+            image2 {
+              image {
+                childImageSharp {
+                  original {
+                    width
+                    height
+                    src
+                  }
+                }
+              }
+            }
+            image3 {
+              image {
+                childImageSharp {
+                  original {
+                    width
+                    height
+                    src
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
+}
 `;
