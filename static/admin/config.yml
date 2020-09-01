@@ -159,7 +159,7 @@ collections:
               default: "about-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Intro", name: "intro", widget: "string" }
+          - { label: Intro, name: intro, widget: "string" }
           - {
               label: blocks,
               name: blocks,
