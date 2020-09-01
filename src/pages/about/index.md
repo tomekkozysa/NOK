@@ -1,5 +1,6 @@
 ---
 templateKey: about-page
+<<<<<<< HEAD
 title: title 2
 date: 2020-08-31T13:03:02.861Z
 image: /img/contact.jpg
@@ -19,5 +20,16 @@ main:
     alt: this is box 3
     image: /img/contact.jpg
 
+=======
+aboutIntro: this is for the test about with blurbs
+pageCopy:
+  blurbs:
+    - image: /img/contact.jpg
+      text: this is box 1
+    - image: /img/atharva-dharmadhikari-5BfGbCu_gVM-unsplash.jpg
+      text: this is box2
+    - image: /img/sharegrid-N10auyEVst8-unsplash.jpg
+      text: this is box3
+>>>>>>> acfbb68252ece774bd5b974f91fa4111e2943c91
 ---
 

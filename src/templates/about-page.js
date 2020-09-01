@@ -119,40 +119,18 @@ export const aboutPageQuery = graphql`
       node {
         id
         frontmatter {
-          main {
-            heading
-            description
-            image1 {
-              image {
-                childImageSharp {
-                  original {
-                    width
-                    height
-                    src
-                  }
-                }
-              }
-            }
-            image2 {
-              image {
-                childImageSharp {
-                  original {
-                    width
-                    height
-                    src
-                  }
-                }
-              }
-            }
-            image3 {
-              image {
-                childImageSharp {
-                  original {
-                    width
-                    height
-                    src
-                  }
-                }
+          description
+          featuredimage {
+            childImageSharp {
+              fluid(maxWidth: 2024, quality: 100) {
+                base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+                originalImg
+                originalName
+                presentationWidth
+                presentationHeight
               }
             }
           }
