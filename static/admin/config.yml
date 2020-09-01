@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-  repo: kosenchiha/NOK
+  repo: tomekkozysa/NOK
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
@@ -45,8 +45,8 @@ collections:
           name: "category",
           widget: "select",
           multiple: true,
-          options: ["COMMERCIAL", "SOCIAL", "LONG FORM"],
-          default: ["COMMERCIAL"],
+          options: ["TV and Theatre", "Short Form and Commercial","Films"],
+          default: ["Films"],
         }
       - {
           label: "Template Key",
