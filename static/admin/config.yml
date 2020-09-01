@@ -159,7 +159,19 @@ collections:
               default: "about-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Intro", name: "intro", widget: "string" }
+          - {
+              label: blocks,
+              name: blocks,
+              widget: list,
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  { label: Text, name: text, widget: text },
+                  { label: Alt, name: alt, widget: text },
+                ],
+            }
+
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
