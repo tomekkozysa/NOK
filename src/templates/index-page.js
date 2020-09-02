@@ -5,7 +5,6 @@ import ProjectsSection from "../components/ProjectsSection";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import "./index-page.css";
-import { shuffle } from "../utils";
 
 export const IndexPageTemplate = ({
   image,
@@ -15,12 +14,12 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-  projects,
+  // projects,
 }) => {
   return (
     <section className="home-page">
       <Hero />
-      <ProjectsSection projects={projects} />
+      <ProjectsSection />
     </section>
   );
 };
@@ -39,7 +38,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  const projects = shuffle(data.projects.nodes);
+  // const projects = data.projects.nodes;
 
   return (
     <Layout>
@@ -50,7 +49,6 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        projects={projects}
       />
     </Layout>
   );
@@ -85,26 +83,6 @@ export const pageQuery = graphql`
           description
         }
         description
-      }
-    }
-    projects: allMarkdownRemark(
-      sort: { order: DESC, fields: frontmatter___date }
-      filter: { fields: { slug: { regex: "/projects/" } } }
-    ) {
-      totalCount
-      nodes {
-        frontmatter {
-          category
-          description
-          heading
-          image {
-            childImageSharp {
-              fluid(maxWidth: 400, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
       }
     }
   }
