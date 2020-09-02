@@ -1,4 +1,3 @@
----
 templateKey: about-page
 aboutIntro: >-
   Next of Kin is the home of iconic talent. Working alongside some of the most
@@ -23,5 +22,3 @@ pageCopy:
         some of the biggest brands in the world, including H&M, Nike and Dior,
         as well as setting up original content studio OTRO: home to exclusive
         formats with the likes of Leo Messi, Neymar Jr and Eric Cantona.
----
-
