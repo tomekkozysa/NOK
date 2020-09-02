@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Img from "gatsby-image";
 import Content, { HTMLContent } from "../components/Content";
 import "./about.css";
 
@@ -24,10 +25,6 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
       </div>
 
-
-      {/* <PageContent className="about-page-content" content={content} /> */}
-
-
     </section>
   );
 };
@@ -39,7 +36,7 @@ AboutPageTemplate.propTypes = {
 };
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
-
+  console.log(post)
   return (
     <Layout>
 
@@ -51,37 +48,23 @@ const AboutPage = ({ data }) => {
       </h2>
 
         <div className="about-page-intro">
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p>{post.frontmatter.aboutIntro}</p>
         </div>
 
         <div className="about-page-profiles">
 
-          <div className="about-page-profile">
-            <div className="profile-img-wrapper">
-              <img className="profile-img" src={'/img/gr-orange-pink.png'} alt="Logo" />
-            </div>
-            <div className="about-page-profile-text">
-              <p className="about-page-profile-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
-          </div>
+          {post.frontmatter.pageCopy.blurbs.map((blurb, key) => {
+            return (<div key={key} className="about-page-profile">
+              <div className="profile-img-wrapper">
+                <Img className="profile-img" alt="Logo" fluid={blurb.image.childImageSharp.fluid} />
 
-          <div className="about-page-profile">
-            <div className="profile-img-wrapper">
-              <img className="profile-img" src={'/img/gr-orange-pink.png'} alt="Logo" />
-            </div>
-            <div className="about-page-profile-text">
-              <p className="about-page-profile-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
-          </div>
-
-          <div className="about-page-profile">
-            <div className="profile-img-wrapper">
-              <img className="profile-img" src={'/img/gr-orange-pink.png'} alt="Logo" />
-            </div>
-            <div className="about-page-profile-text">
-              <p className="about-page-profile-text-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
-          </div>
+              </div>
+              <div className="about-page-profile-text">
+                <p className="about-page-profile-text-copy">{blurb.text} </p>
+              </div>
+            </div>)
+          })
+          }
 
 
         </div>
@@ -110,8 +93,20 @@ export const aboutPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
+        aboutIntro
+        pageCopy{
+          blurbs{
+            text
+            image {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          }
+        }
       }
     }
-  }
+}
 `;
