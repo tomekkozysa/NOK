@@ -152,7 +152,7 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden",default: "about-page",}
+          - { label: "Template Key", name: "templateKey", widget: "hidden",default: "about-page"}
           - {label: "About page intro", name: "aboutIntro", widget: "text"} 
           - {
               label: About page copy,
