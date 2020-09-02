@@ -148,18 +148,31 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/about/index.md"
+     - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden",default: "about-page",}
+          - {label: "About page intro", name: "aboutIntro", widget: "text"} 
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "about-page",
+              label: About page copy,
+              name: pageCopy,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Blurbs,
+                    name: blurbs,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Text, name: text, widget: text },
+                      ],
+                  },
+                ],
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
