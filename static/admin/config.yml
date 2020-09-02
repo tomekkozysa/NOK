@@ -155,8 +155,6 @@ collections:
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden",default: "about-page",}
           - {label: "About page intro", name: "aboutIntro", widget: "text"} 
-          # - {label: "Gallary", name: "gallary", minimize_collapsed: true, widget: "list", summary: '{{fields.image}}'}
-          # field: {label: Image, name: image, widget: image}
           - {
               label: About page copy,
               name: pageCopy,
@@ -175,8 +173,6 @@ collections:
                   },
                 ],
             }
-       
-
 
       - file: "src/pages/products/index.md"
         label: "Products Page"
