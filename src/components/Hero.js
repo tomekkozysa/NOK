@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
@@ -40,15 +40,18 @@ const Hero = () => {
 
   const data = useStaticQuery(heroQuery);
   const { HeroStatement, ShowreelCTA, videoUrl } = data.markdownRemark.frontmatter;
-  
+  const [playShowreel, setPlayShowreel] = useState(false);
 
-  const playShowreel = () =>{
 
+  const playShowreelHandle = () =>{
+    setPlayShowreel(true);
   }
 
-    return (
-      
+    return ( !playShowreel ? 
+
         <section className="home-page-hero">
+
+        
           <div className="hero-background">
           
           </div> 
@@ -57,20 +60,24 @@ const Hero = () => {
 
             <h2>{HeroStatement}</h2>
 
-            <a className="hero-cta-link" onclick={playShowreel}>
+            <a className="hero-cta-link" onClick={ ()=> setPlayShowreel(true) }>
               {ShowreelCTA}
             </a>         
 
-        </div>
+        </div> 
 
-        <div className="hero-showreel">
-          <video controls autoplay="false" className="hero-videoplayer">
-            <source src={videoUrl}  
-            type="video/mp4" />
-          </video>
-        </div>
         
         </section>
+        
+        :
+        
+        <section className="hero-showreel">
+        <video controls autoplay="false" className="hero-videoplayer">
+          <source src={videoUrl}  
+          type="video/mp4" />
+        </video>
+        </section>
+
     
     );
 
