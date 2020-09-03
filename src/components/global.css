@@ -26,7 +26,12 @@
     --header-width: 100%;
     --c-header: #fff;
 
-    --c-linear: linear-gradient(180deg, #e47f54 0%, #e2719f 100%);
+    /* --c-linear: linear-gradient(180deg, #e47f54 0%, #e2719f 100%); */
+
+    --hero-video-maxw:1040px;
+
+
+    
   
 }
 
