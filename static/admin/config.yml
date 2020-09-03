@@ -28,12 +28,6 @@ collections:
           options: ["TV and Theatre", "Short Form and Commercial", "Films"],
           default: ["Films"],
         }
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "string",
-          default: "product-page",
-        }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "image", widget: image }
       - { label: "Heading", name: "heading", widget: "string" }
