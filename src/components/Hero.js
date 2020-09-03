@@ -1,104 +1,89 @@
-import React from "react";
+import React,{useState} from "react";
+
+import Img from "gatsby-image";
+import { useStaticQuery, graphql } from "gatsby";
+import "./hero.css";
 
 
+
+
+
+
+const heroQuery = graphql`
+  query HeroQuery {
     
-
-
-const Hero = class extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.mouseRef = React.createRef();
-    this.evTimeStamp = Date.now();
-
-  }
-
-
-
-  
-  mfMouseHandler = (e)=>{
-
-
-        if(Date.now() - this.evTimeStamp < 100){
-            console.log('cancel event')
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
+        title
+        HeroStatement
+        videoUrl
+        ShowreelCTA
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
-     
-        let mainframe = this.mouseRef.current;
-        
-        let centerX = mainframe.offsetWidth/2;
-        let centerY = mainframe.offsetHeight/2;
-      
-        let distanceX = Math.abs(centerX-e.x);
-        let distanceY = Math.abs(centerY-e.y);
-
-
-        let width = mainframe.offsetWidth-distanceX;
-        let height = mainframe.offsetHeight-distanceY;
-
-        let left = Math.abs(distanceX)+'px';
-        let right = (mainframe.offsetWidth-distanceX)+'px';
-      
-        let top = (distanceY/2) - 60 + 'px';
-        let bottom = (mainframe.offsetHeight-(distanceY)/2)+'px'
+        blurbs{
+          loopLink
+        }
+      }
+    }
     
-        // if( left< 20 || right <20 || top <20 || bottom <20 ){
-        //     return;
-        // }
+  }
+`;
+
+
+
+const Hero = () => {
+
+  const data = useStaticQuery(heroQuery);
+  const { HeroStatement, ShowreelCTA, videoUrl } = data.markdownRemark.frontmatter;
+  const [playShowreel, setPlayShowreel] = useState(false);
+
+
+  const playShowreelHandle = () =>{
+    setPlayShowreel(true);
+  }
+
+    return ( !playShowreel ? 
+
+        <section className="home-page-hero">
 
         
-        
-    document.documentElement.style.setProperty('--clip-top', top); 
-    document.documentElement.style.setProperty('--clip-right', right); 
-    document.documentElement.style.setProperty('--clip-bottom', bottom); 
-    document.documentElement.style.setProperty('--clip-left', left); 
-    // sx variables are used by the gradient rectangle
-    document.documentElement.style.setProperty('--sx', (centerX-e.x)/10+'px'); 
-    document.documentElement.style.setProperty('--sy', (centerY-e.y)/10+'px'); 
-    // mx var is used in transformation that follows the mouse
-    document.documentElement.style.setProperty('--mx', (e.x - centerX)/1.4+'px'); 
-  
-    this.evTimeStamp = Date.now();
-  };
-  
-  
-  
-  
-  componentWillMount() {
-
-    //window.addEventListener("mousemove", this.mfMouseHandler);
-  }
-  
-  componentWillUnmount() {
-    //window.removeEventListener("mousemove", this.mfMouseHandler);
-  }
-  
-  
-  render() {
-    return (
-      
-        <section ref={this.mouseRef}  className="home-page-hero">
-            <div className="hero-background"></div> 
+          <div className="hero-background">
+          
+          </div> 
             
-          <div className="hero-copy">
-        positioning statement <br />
-        can be longer than three words
+          <div className="hero-copy"> 
 
-        <div className="hero-cta-link">
-            play showreel
-        </div>
+            <h2>{HeroStatement}</h2>
 
+            <a className="hero-cta-link" onClick={ ()=> setPlayShowreel(true) }>
+              {ShowreelCTA}
+            </a>         
 
-        </div>
+        </div> 
 
-       
-        
         
         </section>
-      
+        
+        :
+        
+        <section className="hero-showreel">
+        <video controls autoplay="false" className="hero-videoplayer">
+          <source src={videoUrl}  
+          type="video/mp4" />
+        </video>
+        </section>
 
-
+    
     );
-  }
+
+    
+
+  
 };
 
 export default Hero;

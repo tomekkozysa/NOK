@@ -1,60 +1,26 @@
 ---
 templateKey: about-page
-title: About
-intro: 'blocks {         alt         text       }'
-blocks:
-  - alt: fgsah dggg
-    image: /img/Beyonce-v02.jpg
-    text: >
-      It is a long established fact that a reader will be distracted by the
-      readable content of a page when looking at its layout. The point of using
-      Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-      as opposed to using 'Content here, content here', making it look like
-      readable English. Many desktop publishing packages and web page editors
-      now use Lorem Ipsum as their default model text, and a search for 'lorem
-      ipsum' will uncover many web sites still in their infancy. Various
-      versions have evolved over the years, sometimes by accident, sometimes on
-      purpose (injected humour and the like).
-  - alt: gfhgthdf
-    image: /img/Box-1.jpg
-    text: >+
-      orem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially
-      unchanged. It was popularised in the 1960s with the release of Letraset
-      sheets containing Lorem Ipsum passages, and more recently with desktop
-      publishing software like Aldus PageMaker including versions of Lorem
-      Ipsum.
-
-      Why do we use it?
-
-
-  - alt: fasgagbgg
-    image: /img/BOLT.jpg
-    text: >
-      orem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially
-      unchanged. It was popularised in the 1960s with the release of Letraset
-      sheets containing Lorem Ipsum passages, and more recently with desktop
-      publishing software like Aldus PageMaker including versions of Lorem
-      Ipsum.
-
-      Why do we use it?
-
-
-      It is a long established fact that a reader will be distracted by the
-      readable content of a page when looking at its layout. The point of using
-      Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-      as opposed to using 'Content here, content here', making it look like
-      readable English. Many desktop publishing packages and web page editors
-      now use Lorem Ipsum as their default model text, and a search for 'lorem
-      ipsum' will uncover many web sites still in their infancy. Various
-      versions have evolved over the years, sometimes by accident, sometimes on
-      purpose (injected humour and the like).
+aboutIntro: >-
+  Next of Kin is the home of iconic talent. Working alongside some of the most
+  recognisable faces on the planet, we create high-end, premium entertainment
+  across all platforms and mediums. Our mission is to tell incredible stories
+  that surprise, delight and inspire audiences around the world.
+pageCopy:
+  blurbs:
+    - image: /img/Box-1.jpg
+      text: >-
+        Our multi-awarding winning films include feature length biopics of Usain
+        Bolt, the definitive account of Liam Gallagher’s life and David
+        Beckham’s journey across the world for UNICEF.
+    - image: /img/Box-2.jpg
+      text: >-
+        We have created multiple premium formats for TV including entertainment
+        specials with the likes of Beyonce, mental health travelogues with Liam
+        Payne, and set piece interview formats with Steven Hawking.
+    - image: /img/Box-3.jpg
+      text: >-
+        Our filmmaking craft has extended to the creation of commercials for
+        some of the biggest brands in the world, including H&M, Nike and Dior,
+        as well as setting up original content studio OTRO: home to exclusive
+        formats with the likes of Leo Messi, Neymar Jr and Eric Cantona.
 ---
-

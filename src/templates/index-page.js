@@ -7,13 +7,13 @@ import Hero from "../components/Hero";
 import "./index-page.css";
 
 export const IndexPageTemplate = ({
-  image,
+  // image,
   title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
+  // heading,
+  // subheading,
+  // mainpitch,
+  // description,
+  // intro,
   // projects,
 }) => {
   return (
@@ -25,12 +25,12 @@ export const IndexPageTemplate = ({
 };
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  // image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
+  // heading: PropTypes.string,
+  // subheading: PropTypes.string,
+  // mainpitch: PropTypes.object,
+  // description: PropTypes.string,
   // intro: PropTypes.shape({
   //   blurbs: PropTypes.array
   // })
@@ -43,12 +43,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
+        // image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
+        // heading={frontmatter.heading}
+        // subheading={frontmatter.subheading}
+        // mainpitch={frontmatter.mainpitch}
+        // description={frontmatter.description}
       />
     </Layout>
   );
@@ -69,20 +69,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
+       
       }
     }
   }
