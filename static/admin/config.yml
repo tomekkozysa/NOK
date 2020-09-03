@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-  repo: kosenchiha/NOK
+  repo: tomekkozysa/NOK
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
