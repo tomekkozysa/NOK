@@ -1,12 +1,7 @@
-import React,{useState} from "react";
-
+import React, { useState } from "react";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import "./hero.css";
-
-
-
-
 
 
 const heroQuery = graphql`
@@ -42,48 +37,47 @@ const Hero = () => {
   const { HeroStatement, ShowreelCTA, videoUrl } = data.markdownRemark.frontmatter;
   const [playShowreel, setPlayShowreel] = useState(false);
 
-
-  const playShowreelHandle = () =>{
+  const playShowreelHandle = () => {
     setPlayShowreel(true);
   }
 
-    return ( !playShowreel ? 
+  return (!playShowreel ?
 
-        <section className="home-page-hero">
+    <section className="home-page-hero">
 
-        
-          <div className="hero-background">
-          
-          </div> 
-            
-          <div className="hero-copy"> 
 
-            <h2>{HeroStatement}</h2>
+      <div className="hero-background">
 
-            <a className="hero-cta-link" onClick={ ()=> setPlayShowreel(true) }>
-              {ShowreelCTA}
-            </a>         
+      </div>
 
-        </div> 
+      <div className="hero-copy">
 
-        
-        </section>
-        
-        :
-        
-        <section className="hero-showreel">
-        <video controls autoplay="false" className="hero-videoplayer">
-          <source src={videoUrl}  
+        <h2>{HeroStatement}</h2>
+
+        <a className="hero-cta-link" onClick={() => setPlayShowreel(true)}>
+          {ShowreelCTA}
+        </a>
+
+      </div>
+
+
+    </section>
+
+    :
+
+    <section className="hero-showreel">
+      <video controls autoplay="false" className="hero-videoplayer" muted onEnded={() => setPlayShowreel(false)}>
+        <source src={videoUrl}
           type="video/mp4" />
-        </video>
-        </section>
+      </video>
+    </section>
 
-    
-    );
 
-    
+  );
 
-  
+
+
+
 };
 
 export default Hero;
