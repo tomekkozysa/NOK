@@ -1,36 +1,8 @@
 import React, { useState } from "react";
 import Img from "gatsby-image";
-import { useStaticQuery, graphql } from "gatsby";
 const CATEGORIES = ["TV and Theatre", "Short Form and Commercial", "Films"];
-const projectsQuery = graphql`
-  query ProjectsSection {
-    projects: allMarkdownRemark(
-      sort: { order: DESC, fields: frontmatter___date }
-      filter: { fields: { slug: { regex: "/projects/" } } }
-    ) {
-      totalCount
-      nodes {
-        frontmatter {
-          category
-          description
-          heading
-          image {
-            childImageSharp {
-              fluid(maxWidth: 400, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
-const ProjectsSection = () => {
-  const data = useStaticQuery(projectsQuery);
-  const projects = data.projects.nodes;
-
+const ProjectsSection = ({ projects }) => {
   const [projectsToDisplay, setProjectsToDisplay] = useState(projects);
   const [filter, setFilter] = useState(null);
   const [startAnimation, setStartAnimation] = useState(false);
@@ -89,9 +61,8 @@ const ProjectsSection = () => {
               />
             </div>
             <div className="nok-project-text">
-            <p className="nok-project-category">{project.category}</p>
-            <p className="nok-project-heading">{project.heading}</p>
-            
+              <p className="nok-project-category">{project.category}</p>
+              <p className="nok-project-heading">{project.heading}</p>
               <p className="nok-project-text-copy">{project.description}</p>
             </div>
           </div>
