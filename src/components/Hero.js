@@ -1,9 +1,4 @@
-<<<<<<< Updated upstream
-import React, { useState } from "react";
-=======
 import React,{useState, useRef, useEffect} from "react";
-
->>>>>>> Stashed changes
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import "./hero.css";
@@ -105,29 +100,11 @@ const mfMouseHandler = (e)=>{
 
 };
 
-<<<<<<< Updated upstream
   const playShowreelHandle = () => {
-=======
-
-
-
-
- 
-  const playShowreelHandle = () =>{
-    
-    
-    // enable video player 
-    // wait for the clip to load
-    // hide image ( or loop ) + hero copy & CTA
-    // show video player, autoplay video 
-
-    
->>>>>>> Stashed changes
     setPlayShowreel(true);
 
   }
 
-<<<<<<< Updated upstream
   return (!playShowreel ?
 
     <section className="home-page-hero">
@@ -162,61 +139,8 @@ const mfMouseHandler = (e)=>{
 
   );
 
-=======
-  useEffect(() => {
-    console.log("Behavior before the component is added to the DOM");
-    heroMedia.current.addEventListener('mousemove',mfMouseHandler);
-  }, []);
 
 
-
-
-    return ( !playShowreel ? 
-
-        <section className="home-page-hero" ref={heroMedia} >        
-          <div className="hero-background">
-          
-          <video muted autoPlay className="hero-loopplayer"
-            onCanPlay={onLoopReady}
-          loop>
-            <source src="https://res.cloudinary.com/fifteennine/video/upload/v1599207607/_/nok/NOK-Hero-Loop-v02-sml_1.mp4"  
-            type="video/mp4" />
-          </video>
-
-          </div> 
-            
-          <div className="hero-copy">
-            <h2>{HeroStatement}</h2>
-            <a className="hero-cta-link" onClick={ ()=> setPlayShowreel(true) }>
-              {ShowreelCTA}
-            </a>         
-
-        </div>
-        
-        </section>
-
-        
-        
-        :
-        
-        <section className="hero-showreel">
-
-        <video controls autoplay 
-          className="hero-videoplayer" 
-          
-          onCanPlay={(e)=> onCanPlay(e)}>
-          <source src={videoUrl}  
-          type="video/mp4" />
-
-        </video>
-        </section>
->>>>>>> Stashed changes
-
-
-<<<<<<< Updated upstream
-=======
-    // VIDEO.addEventListener();
->>>>>>> Stashed changes
 
 };
 
