@@ -4,6 +4,8 @@ import nextofkin from "../img/nextofkin.svg";
 import navbutton from "../img/navbutton.svg";
 import "./Header.css";
 import Navigation from "../components/Navigation";
+// import Img from "gatsby-image"
+// import {useStaticQuery,graphql} from "gatsby"
 
 const Header = class extends React.Component {
   constructor(props) {
@@ -15,7 +17,7 @@ const Header = class extends React.Component {
   }
 
   toggleHamburger = () => {
-      
+
     this.setState(
       {
         active: !this.state.active
@@ -25,34 +27,36 @@ const Header = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: "is_active"
-            })
+            navBarActiveClass: "is_active"
+          })
           : this.setState({
-              navBarActiveClass: ""
-            });
+            navBarActiveClass: ""
+          });
       }
     );
 
-    console.log('H:',this.state.navBarActiveClass )
+    console.log('H:', this.state.navBarActiveClass)
   };
 
   render() {
     return (
       <header className="header-main">
-          <hgroup className="header-content">
+        <hgroup className="header-content">
+
           <div className="header-logo">
-          
             <img src={nextofkin} alt="NextOfKin" />
+
           </div>
           <div className="nav-toggle">
-            <img className="nav-toggle-button" src={navbutton} alt="NextOfKin" onClick={() => this.toggleHamburger()}/>
-          </div>        
-          </hgroup>  
 
-          
-          <Navigation active={this.state.navBarActiveClass} />
+            <img className="nav-toggle-button" src={navbutton} alt="NextOfKin" onClick={() => this.toggleHamburger()} />
+          </div>
+        </hgroup>
+
+
+        <Navigation active={this.state.navBarActiveClass} />
       </header>
-      
+
     );
   }
 };

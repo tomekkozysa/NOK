@@ -3,16 +3,21 @@
     height:var(--header-height);
     width:var(--header-width);
     background-color: var(--c-header);
-    display:flex;
+    /* display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .header-content{
     /* position: relative; */
     z-index:5000;
 }
-
+.header-logo{
+    margin-left: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: calc(calc(var(--header-height) - 56px)/2)}
 .nav-toggle{
     position: absolute;
     
