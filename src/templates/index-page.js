@@ -83,7 +83,7 @@ export const pageQuery = graphql`
         frontmatter {
           category
           description
-          heading
+          title
           image {
             childImageSharp {
               fluid(maxWidth: 400, quality: 100) {

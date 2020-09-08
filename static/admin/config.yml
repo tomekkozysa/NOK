@@ -25,14 +25,12 @@ collections:
           name: "category",
           widget: "select",
           multiple: true,
-          options: ["TV and Theatre", "Short Form and Commercial","Films"],
+          options: ["TV and Theatre", "Short Form and Commercial", "Films"],
           default: ["Films"],
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "image", widget: image }
-      - { label: "Heading", name: "heading", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      # - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "pages"
     label: "Pages"
@@ -51,22 +49,24 @@ collections:
           - { label: Hero Image, name: image, widget: image }
           - { label: Hero Statement, name: HeroStatement, widget: string }
           - { label: Video URL, name: videoUrl, widget: string }
-          - {label: Showreel CTA, name: ShowreelCTA, widget: string }
+          - { label: Showreel CTA, name: ShowreelCTA, widget: string }
           - {
-                    label: Hero Loops,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Loop Link, name: loopLink, widget: string },
-                      ],
-                  }
+              label: Hero Loops,
+              name: blurbs,
+              widget: list,
+              fields: [{ label: Loop Link, name: loopLink, widget: string }],
+            }
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden",default: "about-page"}
-          - {label: "About page intro", name: "aboutIntro", widget: "text"} 
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: "About page intro", name: "aboutIntro", widget: "text" }
           - {
               label: About page copy,
               name: pageCopy,
