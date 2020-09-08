@@ -62,15 +62,3 @@ const Header = class extends React.Component {
 };
 
 export default Header;
-
-export const query = graphql`
-  query MyQuery {
-    file(relativePath: { eq: "img/nextofkin.jpg" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }`
