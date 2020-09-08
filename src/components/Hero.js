@@ -66,7 +66,7 @@ const Hero = () => {
     :
 
     <section className="hero-showreel">
-      <video controls autoplay="false" className="hero-videoplayer" muted onEnded={() => setPlayShowreel(false)}>
+      <video className="hero-videoplayer">
         <source src={videoUrl}
           type="video/mp4" />
       </video>
