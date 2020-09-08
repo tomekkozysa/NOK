@@ -8,10 +8,13 @@
 
 .nok-project {
   /* height changes the after element */
-  --exp-height: 80%;
+  --exp-height: 40px;
+  --exp-width: 80%;
   /* width changes how much of the layout width is used */
   --default-width: 100%;
-  --exp-width: 100%;
+  /* 
+  this isn't used:
+  --exp-width: 100%; */
 }
 
 .nok-projects-wrapper {
@@ -40,49 +43,74 @@
   align-items: center;
   width: var(--default-width);
   position: relative;
+
 }
-.nok-project:nth-child(even) .project-img {
-  /* float:right; */
+
+/* .nok-project:nth-child(even):after {
+  left: auto;
+  right: -20px;
 }
-.nok-project:after {
-  width: 40%;
+ */
+
+
+ .project-img-wrapper {
+  flex: 2 2; /* let image width specify the size of the wrapper*/
+  position: relative;
+}
+
+
+
+.project-img-wrapper:after {
+  
   position: absolute;
 
   bottom: calc(-20px);
   z-index: -1;
-  height: 30px;
+  /*
+  z-index: 100;
+  mix-blend-mode: multiply;
+  */
+  
   background: var(--c-primary);
   content: " ";
   left: -20px;
+
+  height: var(--exp-height);
+  width: var(--exp-width);
+
 }
-.nok-project:nth-child(even):after {
-  left: auto;
-  right: -20px;
-}
+
 
 .nok-project.is_expanded {
   width: 100%;
 }
 
-.nok-project.is_expanded:after {
-  height: var(--exp-height);
-  width: 100%;
-}
 
 .nok-project:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.project-img-wrapper {
-  flex: 2 2; /* let image width specify the size of the wrapper*/
+.nok-project:nth-child(even) .project-img-wrapper{
+ 
+}
+.nok-project:nth-child(even) .project-img-wrapper:after{
+
+  width: var(--exp-height);
+  height: var(--exp-width);
+
+  left: auto;
+  right:-20px;
+  
 }
 
-.project-img {
+
+
+/* .project-img {
   width: 450px;
   max-width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 .nok-project-heading {
   color: var(--c-primary);
@@ -94,7 +122,7 @@
 
 .nok-project-text {
   flex: 1 2 300px;
-  height: var(--exp-height);
+  /* height: var(--exp-height); */
   /* color:var(--c-text-secondary); */
   color: var(--c-primary);
   align-self: flex-end;
@@ -106,13 +134,26 @@
 .nok-project-text-copy {
   /* padding: 0 1em 2em; */
   padding:1em 0 ;
+  
 }
+
+
 .nok-project:nth-child(even) .nok-project-text-copy {
   /* padding-left:5em; */
 }
 
+
+
+
+
+
+
+
 .home-page-projects-filter {
 }
+
+
+
 .projects-filter-headline {
   text-align: center;
   font-size: var(--fs-section-headline);
@@ -126,7 +167,7 @@
   align-items: center;
 }
 .projects-filter-item {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: inline-block;
   padding: 0.5em 2em;
 }
