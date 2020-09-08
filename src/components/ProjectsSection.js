@@ -57,12 +57,12 @@ const ProjectsSection = ({ projects }) => {
             <div className="project-img-wrapper">
               <Img
                 fluid={project.image.childImageSharp.fluid}
-                alt={project.heading}
+                alt={project.title}
               />
             </div>
             <div className="nok-project-text">
               <p className="nok-project-category">{project.category}</p>
-              <p className="nok-project-heading">{project.heading}</p>
+              <p className="nok-project-heading">{project.title}</p>
               <p className="nok-project-text-copy">{project.description}</p>
             </div>
           </div>
