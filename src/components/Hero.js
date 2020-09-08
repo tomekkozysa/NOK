@@ -100,48 +100,73 @@ const mfMouseHandler = (e)=>{
 
 };
 
-  const playShowreelHandle = () => {
+  
+
+ 
+  const playShowreelHandle = () =>{
+    
+    
+    // enable video player 
+    // wait for the clip to load
+    // hide image ( or loop ) + hero copy & CTA
+    // show video player, autoplay video 
+
+    
     setPlayShowreel(true);
 
   }
 
-  return (!playShowreel ?
-
-    <section className="home-page-hero">
-
-
-      <div className="hero-background">
-
-      </div>
-
-      <div className="hero-copy">
-
-        <h2>{HeroStatement}</h2>
-
-        <a className="hero-cta-link" onClick={() => setPlayShowreel(true)}>
-          {ShowreelCTA}
-        </a>
-
-      </div>
+  useEffect(() => {
+    console.log("Behavior before the component is added to the DOM");
+    heroMedia.current.addEventListener('mousemove',mfMouseHandler);
+  }, []);
 
 
-    </section>
 
-    :
 
-    <section className="hero-showreel">
-      <video className="hero-videoplayer">
-        <source src={videoUrl}
+    return ( !playShowreel ? 
+
+        <section className="home-page-hero" ref={heroMedia} >        
+          <div className="hero-background">
+          
+          <video muted autoPlay className="hero-loopplayer"
+            onCanPlay={onLoopReady}
+          loop>
+            <source src="https://res.cloudinary.com/fifteennine/video/upload/v1599207607/_/nok/NOK-Hero-Loop-v02-sml_1.mp4"  
+            type="video/mp4" />
+          </video>
+
+          </div> 
+            
+          <div className="hero-copy">
+            <h2>{HeroStatement}</h2>
+            <a className="hero-cta-link" onClick={ ()=> setPlayShowreel(true) }>
+              {ShowreelCTA}
+            </a>         
+
+        </div>
+        
+        </section>
+
+        
+        
+        :
+        
+        <section className="hero-showreel">
+
+        <video controls autoplay 
+          className="hero-videoplayer" 
+          
+          onCanPlay={(e)=> onCanPlay(e)}>
+          <source src={videoUrl}  
           type="video/mp4" />
-      </video>
-    </section>
+
+        </video>
+        </section>
 
 
-  );
-
-
-
-
+    // VIDEO.addEventListener();
+    );
 };
-
+    
 export default Hero;
