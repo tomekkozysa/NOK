@@ -6,16 +6,17 @@
   border-top: 1px solid var(--c-primary);
 }
 
-.nok-project {
+
+/* .nok-project {
   /* height changes the after element */
-  --exp-height: 40px;
-  --exp-width: 80%;
+  /* --exp-height: 40px;
+  --exp-width: 80%;  */
   /* width changes how much of the layout width is used */
-  --default-width: 100%;
+  /* --default-width: 100%; */
   /* 
   this isn't used:
   --exp-width: 100%; */
-}
+/* } */
 
 .nok-projects-wrapper {
   /* background: red; */
@@ -35,22 +36,17 @@
     opacity: 1;
   }
 }
+ /* there are two classes now just one class has the all style*/
 .nok-project {
   /* min-height:70vh; */
   margin: 10vh auto 0;
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  width: var(--default-width);
+  /* width: var(--default-width); */
   position: relative;
-
 }
 
-/* .nok-project:nth-child(even):after {
-  left: auto;
-  right: -20px;
-}
- */
 
 
  .project-img-wrapper {
@@ -75,8 +71,8 @@
   content: " ";
   left: -20px;
 
-  height: var(--exp-height);
-  width: var(--exp-width);
+  height: var( --exp-height-Desktop);
+  width: var(--exp-width-Desktop);
 
 }
 
@@ -95,8 +91,8 @@
 }
 .nok-project:nth-child(even) .project-img-wrapper:after{
 
-  width: var(--exp-height);
-  height: var(--exp-width);
+  width: var(--exp-height-Desktop);
+  height: var(--exp-width-Desktop);
 
   left: auto;
   right:-20px;
@@ -138,40 +134,137 @@
 }
 
 
-.nok-project:nth-child(even) .nok-project-text-copy {
-  /* padding-left:5em; */
-}
-
-
-
-
-
-
-
-
-.home-page-projects-filter {
-}
-
-
 
 .projects-filter-headline {
   text-align: center;
   font-size: var(--fs-section-headline);
   text-transform: uppercase;
   color: var(--c-primary);
+ 
 }
 .projects-filter-items {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 .projects-filter-item {
   /* text-transform: uppercase; */
   display: inline-block;
   padding: 0.5em 2em;
+  /* font-size:var(--projects-font-size-Desktop); */
+   
 }
+/* phones, less than 768px */
 
 .chosen {
   border-bottom: 3px solid var(--c-primary);
 }
+
+/* mediaa query for phone size */
+/* resourses  http://devfacts.com/media-queries-breakpoints-2020/ */
+
+ @media (max-width: 575.98px) {
+   .home-page-projects{
+     padding: 5vh 0;
+   }
+   .project-img-wrapper:after {
+     display: contents;
+   }
+  .nok-project{
+    /* flex-direction: column;
+    padding: 0 100px 0 0; */
+    display: block;
+  }
+  .project-img-wrapper {
+    /* width: 100%;
+    flex: 2 2;
+    position: relative;
+    margin-bottom: 2em;
+    align-self: flex-start; */
+    padding: 0 0 20px 100px;
+  }
+  .nok-project:nth-child(even) {
+   width: 100%;
+  }
+  .nok-project:nth-child(even) .project-img-wrapper{
+   padding: 0 100px 20px 0;
+  }
+  .nok-project-text{
+    align-self:flex-end;
+    padding:  0 2em 0 5em;
+  }
+  .nok-project:nth-child(even) .nok-project-text{
+      padding: 0 5em 0 1em;
+  }
+  .projects-filter-item{
+    font-size: var(--fs-body-Mobile);
+         display: block;
+    text-align: center; 
+  }
+    .projects-filter-items{ 
+          display: block;
+    text-align: center; 
+  }
+  
+}
+
+/* @media (max-width: 576px) {
+    .nok-project-text{
+    font-size: var(--fs-body-Mobile);
+  }
+  .nok-project-heading{
+    font-size: var(--fs-project-heading-mobile);
+    font-weight:bold;
+  }
+    .projects-filter-item{
+    font-size: var( --fs-body-Mobile);
+  }
+  .projects-filter-items{
+         display: block;
+    text-align: center;
+  }
+.projects-filter-headline{
+  font-size: var( --fs-section-headline-Mobile);
+  font-weight: bold;
+}
+ 
+} */
+
+/* media queries for tablets  */
+
+/* @media (min-width: 768px) {
+  .nok-project-text{
+    font-size: var( --fs-body-Tablet);
+  }
+  .nok-project-heading{
+    font-size: var(--fs-project-heading-Tablet);
+    font-weight:bold;
+  }
+    .projects-filter-item{
+    font-size: var(--fs-body-Tablet);
+  }
+.projects-filter-headline{
+  font-size: var( --fs-section-headline-Tablet);
+  font-weight: bold;
+}
+} */
+
+/* Desktop */
+/* @media (min-width: 1200px) {
+    .nok-project-text{
+    font-size: var(--projects-font-size-Desktop);
+  }
+  .nok-project-heading{
+    font-size: var(--fs-project-heading-Desktop);
+    font-weight:bold;
+  }
+    .projects-filter-item{
+    font-size: var(--projects-font-size-Desktop);
+  }
+.projects-filter-headline{
+  font-size: var( --fs-section-headline-Desktop);
+  font-weight: bold;
+}
+} */

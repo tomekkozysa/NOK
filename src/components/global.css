@@ -11,7 +11,11 @@
     --fs-section-headline: 32px;
     --fs-navigation: 56px;
     --fs-project-heading: 32px;
+ 
+   
     --fs-body: 20px;
+    --fs-body-Mobile: 18px;
+    --fs-body-Tablet: 16px;
 
 
     --c-primary: #a0191e;
@@ -29,9 +33,26 @@
     /* --c-linear: linear-gradient(180deg, #e47f54 0%, #e2719f 100%); */
 
     --hero-video-maxw:1040px;
+/* projects Menu section */
+ 
+  /* width changes how much of the layout width is used */
+  --default-width-Desktop: 100%;
+
+    --fs-section-headline-Tablet: 26px;
+     --fs-section-headline-Mobile: 16px;
+     /* heading */
+    --fs-project-heading-Tablet:26px;
+    --fs-project-heading-mobile:14px;
 
 
-    
+    --exp-height-Desktop: 40px;
+    --exp-height-Tablet: 30px;
+    --exp-height-Mobile: 10px;
+    --exp-width-Desktop: 80%; 
+    --exp-width-Tablet: 40%;
+    --exp-width-Mobile: 35%; 
+  
+
   
 }
 
