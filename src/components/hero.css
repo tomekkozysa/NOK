@@ -1,32 +1,67 @@
+:root{
+
+  --fs-hero-cta:56px;
+  --fs-hero-close-btn:16px;
+
+}
 .home-page-hero {
   width: 100%;
-  height:80vh;
+  min-height:80vh;
   
 
   text-align: center;
   font-family: "Roboto Mono";
 
   z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  
 
   /* background:yellow; */
 
 }
 
+.hero-loop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  width: 100%;
+  height:80vh;
+  position: absolute;
+
+
+
+}
+
 .hero-copy {
+  box-sizing: border-box;
+  
   font-size: 56px;
-  color: #a0191e;
+  color: var(--c-primary);
   font-weight: 400;
   position: absolute;
   z-index: 20;
 }
 
+.hero-close{
+  text-align: right;
+}
+.hero-close-link{
+  font-size: var(--fs-hero-close-btn);
+  /* font-weight:700; */
+  color: var(--c-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1em;
+}
+
 
 .hero-cta-link {
-    font-weight:700;
+  --fs-hero-cta : 32px;
+  padding-top:56px;
+  font-size: var(--fs-hero-cta);
+  font-weight:700;
   margin-top: 1em;
   color: var(--c-secondary-accent);
   text-decoration: underline;
@@ -34,9 +69,26 @@
 }
 
 .hero-cta-link:hover {
-  color: #a0191e;
+  color: var(--c-primary);
+  
   /* text-decoration: stroke; */
 }
+
+
+.nav-toggle-button-line-one{
+  transform:translate(0, 4px);
+}
+.nav-toggle-button-line-two{
+  transform:translate(0, -4px);
+}
+.is_open .nav-toggle-button-line-one{
+  transform:translate(0, 1px);
+  
+}
+.is_open .nav-toggle-button-line-two{
+  transform:translate(0, -1px);
+}
+
 
 .hero-background {
   /* background: url("https://res.cloudinary.com/fifteennine/image/upload/v1583273786/lab/water.jpg")  */
@@ -53,14 +105,19 @@
     var(--clip-bottom),
     var(--clip-left)
   );
+  will-change: clip;
+  transition: clip 0.75s ease-out;
+  transition-delay: 0;
+
+  
   display: flex;
   align-items: center;
   justify-content: center;
-  will-change: clip;
-  transition: clip 0.5s ease-out;
-  transition-delay: 0;
-  filter:grayscale(1);
+ 
+  
   /*   transform:translate(var(--mx), 0); */
+
+  
 }
 
 
@@ -74,22 +131,56 @@
 
 .hero-showreel{
     
-    top:0;
+    /* top:0;
     left:0;
     width:100%;
     height:100%;
-    align-items: center;
+
+    max-height:80vh;
+     */
+     align-items: center;
     justify-content: center;
     display: flex;
-    background:var(--c-secondary);
+    flex-direction: column; 
+    min-height: 80vh;
+    /* background:var(--c-secondary); */
 }
 
 
 .hero-videoplayer{
-    width:100%;
-    max-width: var(--hero-video-maxw);
+    width:auto;
+    height:auto;
+    /* max-width: var(--hero-video-maxw); */
+    max-height: 80vh;
+    
 }
+
 .hero-videoplayer:focus{
     outline:0;
 }
 
+
+
+
+.hero-loop,
+.hero-showreel{
+  transition: all .4s ease-out;
+}
+.hero-loop.is_playing{
+  opacity:1;
+}
+.hero-loop.is_hidden{
+  opacity:0;
+  pointer-events: none;
+}
+.hero-loop.is_hidden .hero-background{
+  
+}
+.hero-showreel.is_playing{
+  opacity:1;
+  transform:scale(1);
+}
+.hero-showreel.is_hidden{
+  opacity:0;
+  transform:scale(.85);
+}
