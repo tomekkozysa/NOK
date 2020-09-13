@@ -1,50 +1,86 @@
-.about-page{
-
-    max-width:var(--layout-maxw);
-    margin:var(--layout-mt) auto 0;
-    color:var(--c-primary);
-    padding:5vh 40px;
+:root {
+  --fs-about-text: 18px;
+  --alt-padding-mobile: 20vw;
 }
 
-
-.about-page-title{
-    font-size:var(--fs-section-headline);
+.about-page {
+  max-width: var(--layout-maxw);
+  margin: var(--layout-mt) auto 0;
+  color: var(--c-primary);
+  padding: 5vh 40px;
 }
 
-
-.about-page-intro{
-  
-}
-.about-page-profiles{
-    margin-top:10vh;
+.about-page-title {
+  font-size: var(--fs-section-headline);
 }
 
-.about-page-profile:nth-child(even){
-    flex-direction: row-reverse;
+.about-page-intro {
 }
-.about-page-profile{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height:60vh;
-
+.about-page-profiles {
+  margin-top: 10vh;
 }
 
-
-.profile-img-wrapper{
-    flex:2 1;
+.about-page-profile:nth-child(even) {
+  flex-direction: row-reverse;
 }
-.profile-img{
-    
-    width:400px;
-    height:auto;
-    display: block;
-    
+.about-page-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
 }
 
-.about-page-profile-text{
-    flex:2 1;
+.profile-img-wrapper {
+  flex: 2 1;
 }
-.about-page-profile-text-copy{
-    padding:2em;
+.profile-img {
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+
+.about-page-profile-text {
+  flex: 2 1;
+}
+.about-page-profile-text-copy {
+  padding: 2em;
+}
+
+@media (max-width: 575.98px) {
+  .about-page {
+    padding: 0;
+    font-size: var(--fs-about-text);
+  }
+  .about-page-title,
+  .about-page-intro {
+    padding: 0 10px 0 25px;
+  }
+  .about-page-profile {
+    flex-direction: column;
+    padding: 0 0 0 var(--alt-padding-mobile);
+    margin-bottom: 10vh;
+  }
+  .about-page-profile:nth-child(even) {
+    flex-direction: column;
+    padding: 0 var(--alt-padding-mobile) 0 0;
+  }
+  .profile-img-wrapper {
+    flex: none;
+    width: 100%;
+  }
+  .profile-img {
+    position: static;
+    padding: 0;
+    max-width: 100%;
+  }
+  .about-page-profile-text {
+    flex: none;
+  }
+
+  .about-page-profile-text-copy {
+    padding: 25px 10px 10px 0;
+  }
+  .about-page-profile:nth-child(even) .about-page-profile-text-copy {
+    padding: 25px 0 10px 25px;
+  }
 }
