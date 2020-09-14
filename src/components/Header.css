@@ -1,34 +1,115 @@
+:root{
+
+    --header-logo-width:auto;
+    --header-logo-height:40px;
+    --header-logo-ptb:20px;
+
+    --nav-icon-size:30px;
+
+}
 .header-main{
 
-    height:var(--header-height);
+    /* height:var(--header-height); */
     width:var(--header-width);
     background-color: var(--c-header);
+    position: sticky;
+    top:0;
+    z-index:1000;
     /* display:flex;
     align-items: center;
     justify-content: center; */
 }
 
 .header-content{
-    /* position: relative; */
+    position: relative;
     z-index:5000;
 }
 .header-logo{
-    margin-left: auto;
-    display: block;
+    /* margin-left: auto; */
+    /* display: block; */
     width: 100%;
     text-align: center;
-    padding-top: calc(calc(var(--header-height) - 56px)/2)}
-.nav-toggle{
-    position: absolute;
+    /* padding-top: calc(calc(var(--header-height) - var(--header-logo-height))/2)} */
+    padding:var(--header-logo-ptb);
+}
+
+.header-logo img{
+
+    width:var(--header-logo-width);
+    height:var(--header-logo-height);
     
+}
+
+.nav-toggle{
+    position: absolute;    
     top:0;
     right:20px;
-    height:var(--header-height);
+    height:100%;
     display:flex;
     align-items: center;
     justify-content: center;
 
 }
+
+
 .nav-toggle-button{
     cursor: pointer;
+    height:var(--nav-icon-size);
+    width:auto;
+    /* transition: transform .2s; */
+}
+
+
+.nav-toggle-button.is_open{
+    /* transform:rotate(180deg); */
+    /* transform-origin: center; */
+}
+
+
+
+
+
+
+
+.nav-toggle-button-line-one{
+    transform:translate(0, 3px);
+    transform-origin: center;
+    transition: transform .2s;
+    stroke-width: 2px;
+  }
+  .nav-toggle-button-line-two{
+    transform:translate(0, -3px);
+    transform-origin: center;
+    transition: transform .2s;
+    stroke-width: 2px;
+    
+  }
+
+
+
+.nav-toggle-button:hover .nav-toggle-button-line-one{   
+    transform:translate(0, 6px);
+}
+.nav-toggle-button:hover .nav-toggle-button-line-two{   
+    transform:translate(0, -6px);
+}
+
+
+
+/* CLOSE ICON */
+  .is_open .nav-toggle-button-line-one{
+    /* transform:translate(0, 0px) rotate(225deg); */
+    transform:translate(0, 0px) rotate(225deg);
+    
+  }
+  .is_open .nav-toggle-button-line-two{
+    transform:translate(0, 0px) rotate(-45deg);
+  }
+  
+
+.nav-toggle-button.is_open:hover .nav-toggle-button-line-one{   
+    transform:translate(0, 0)  rotate(-45deg);
+}
+.nav-toggle-button.is_open:hover .nav-toggle-button-line-two{   
+    transform:translate(0, 0) rotate(225deg);
 }

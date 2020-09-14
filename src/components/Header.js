@@ -1,11 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
 import nextofkin from "../img/nextofkin.svg";
-import navbutton from "../img/navbutton.svg";
 import "./Header.css";
 import Navigation from "../components/Navigation";
-// import Img from "gatsby-image"
-// import {useStaticQuery,graphql} from "gatsby"
+
 
 const Header = class extends React.Component {
   constructor(props) {
@@ -35,25 +32,26 @@ const Header = class extends React.Component {
       }
     );
 
-    console.log('H:', this.state.navBarActiveClass)
+    
   };
 
   render() {
     return (
       <header className="header-main">
         <hgroup className="header-content">
-
           <div className="header-logo">
             <img src={nextofkin} alt="NextOfKin" />
-
           </div>
           <div className="nav-toggle">
+            <svg className={this.state.active ? "nav-toggle-button is_open" : "nav-toggle-button"} 
+            onClick={() => this.toggleHamburger()}            
+            width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-            <img className="nav-toggle-button" src={navbutton} alt="NextOfKin" onClick={() => this.toggleHamburger()} />
+            <line className="nav-toggle-button-line-one" x1="0" y1="15" y2="15" x2="30" strokeWidth="3" stroke="var(--c-primary)" />
+            <line className="nav-toggle-button-line-two" x1="0" y1="15" y2="15" x2="30" strokeWidth="3" stroke="var(--c-primary)" />
+            </svg>      
           </div>
         </hgroup>
-
-
         <Navigation active={this.state.navBarActiveClass} />
       </header>
 
