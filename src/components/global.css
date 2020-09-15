@@ -22,10 +22,7 @@
       --fs-body-Mobile: 18px;
       --fs-body-Tablet: 16px;
 
-    /*  header */
-
-
-        
+    /*  header */        
     --header-height: 80px;
     --header-width: auto;
     --c-header: #fff;
@@ -35,10 +32,7 @@
 
 
 
-
-
-    --nav-icon-size:25px;
-    --hero-video-maxw:1040px;
+    
 
 
 
@@ -48,7 +42,7 @@
     --fs-hero: 56px;
     --fs-hero-mobile:32px;
 
-
+    --hero-video-maxw:1040px;
 
     /* hero statement font-size clamp values */
     --minFontSize: 32px;
@@ -68,21 +62,20 @@
 
 
 
-
-    
+  /* navigation */
+    --nav-icon-size:25px;
     --fs-navigation: 56px;
     --fs-navigation-mobile: 32px;
     
 
+  /* footer */
+  --fs-footer:14px;
+  --fs-footer-mobile:12px;
 
 
 
 
 
-
-    --fs-section-headline: 32px;
-    --fs-section-headline-Tablet: 26px;
-    --fs-section-headline-Mobile: 16px;
 
 
     /* project heading */
@@ -100,7 +93,13 @@
     --fs-filter-headline:32px;
     --fs-filter-headline-mobile:22px;
 
+  /* sections */
 
+
+
+  --fs-section-headline: 32px;
+  --fs-section-headline-Tablet: 26px;
+  --fs-section-headline-Mobile: 16px;
 
 
 
