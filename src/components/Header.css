@@ -4,12 +4,13 @@
     --header-logo-height:40px;
     --header-logo-ptb:20px;
 
-    --nav-icon-size:30px;
+    --nav-icon-size:25px;
+   
 
 }
 .header-main{
 
-    /* height:var(--header-height); */
+    height:var(--header-height);
     width:var(--header-width);
     background-color: var(--c-header);
     position: sticky;
@@ -28,11 +29,23 @@
     /* margin-left: auto; */
     /* display: block; */
     width: 100%;
+    
     text-align: center;
     /* padding-top: calc(calc(var(--header-height) - var(--header-logo-height))/2)} */
-    padding:var(--header-logo-ptb);
+    /* padding:var(--header-logo-ptb); */
+    
+    
+    
+    height: var(--header-height);
+    background:url('../img/nextofkin.svg') no-repeat center;
+    background-size: auto var(--header-logo-height);
+     
 }
-
+.header-logo-link{
+    text-indent: -99999px;
+    display: inline-block;
+    min-width:60px;
+}
 .header-logo img{
 
     width:var(--header-logo-width);
@@ -74,14 +87,14 @@
 .nav-toggle-button-line-one{
     transform:translate(0, 3px);
     transform-origin: center;
-    transition: transform .2s;
-    stroke-width: 2px;
+    transition: transform .3s;
+    stroke-width: 3px;
   }
   .nav-toggle-button-line-two{
     transform:translate(0, -3px);
     transform-origin: center;
-    transition: transform .2s;
-    stroke-width: 2px;
+    transition: transform .3s;
+    stroke-width: 3px;
     
   }
 

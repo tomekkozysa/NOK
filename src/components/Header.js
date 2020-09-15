@@ -1,7 +1,9 @@
 import React from "react";
-import nextofkin from "../img/nextofkin.svg";
-import "./Header.css";
+import { Link } from "gatsby";
+
 import Navigation from "../components/Navigation";
+
+import "./Header.css";
 
 const Header = class extends React.Component {
   constructor(props) {
@@ -35,9 +37,11 @@ const Header = class extends React.Component {
     return (
       <header className="header-main">
         <hgroup className="header-content">
-          <div className="header-logo">
-            <img src={nextofkin} alt="NextOfKin" />
-          </div>
+          <h1 className="header-logo">
+            <Link className="header-logo-link" to="/">
+              Next of Kin
+            </Link>
+          </h1>
           <div className="nav-toggle">
             <svg
               className={

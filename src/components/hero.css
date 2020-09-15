@@ -32,7 +32,14 @@
 
 
 }
+.hero-statement{
 
+  --minFontSize: 32px;
+  --maxFontSize: 72px;
+  --scaler: 10vw;
+  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
+
+}
 .hero-copy {
   box-sizing: border-box;
   
@@ -74,20 +81,6 @@
   /* text-decoration: stroke; */
 }
 
-
-.nav-toggle-button-line-one{
-  transform:translate(0, 4px);
-}
-.nav-toggle-button-line-two{
-  transform:translate(0, -4px);
-}
-.is_open .nav-toggle-button-line-one{
-  transform:translate(0, 1px);
-  
-}
-.is_open .nav-toggle-button-line-two{
-  transform:translate(0, -1px);
-}
 
 
 .hero-background {

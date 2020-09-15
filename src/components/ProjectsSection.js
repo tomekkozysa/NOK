@@ -39,14 +39,14 @@ const ProjectsSection = ({ projects }) => {
         <h2 className="projects-filter-headline">Our work</h2>
         <ul className="projects-filter-items">
           {CATEGORIES.map((category) => (
+            
             <li
-              key={category}
-              className={getClassForFilterItem(category, filter)}
-              id={category}
-              onClick={handleFilterChoice}
+              key={category}             
             >
-              <a href="#" id={category}
-                onClick={handleFilterChoice} className="projects-filter-link"
+              <a href="#" 
+              id={category}
+              className={getClassForFilterItem(category, filter)}
+              onClick={handleFilterChoice}
               >{category}
 
               </a>
@@ -64,11 +64,13 @@ const ProjectsSection = ({ projects }) => {
               <Img
                 fluid={project.image.childImageSharp.fluid}
                 alt={project.title}
+                placeholderStyle = {{opacity:0}}
+                backgroundColor = '#333'
               />
             </div>
             <div className="nok-project-text">
               <p className="nok-project-category">{project.category}</p>
-              <p className="nok-project-heading">{project.title}</p>
+              <h3 className="nok-project-heading">{project.title}</h3>
               <p className="nok-project-text-copy">{project.description}</p>
             </div>
           </div>
