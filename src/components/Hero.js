@@ -48,14 +48,17 @@ const Hero = ({ onHeroUpdate }) => {
   const loopUrl = blurbs[0].loopLink;
 
 
+  
+
+
+
   const onShowreelReady = (e) =>{}
   const onLoopReady = (e) =>{}
 
   const onShowreelEnded = (e) =>{
     closeShowreelHandle();
   }
-
-  
+ 
  
   const closeShowreelHandle = () =>{
     setPlayShowreel(false); 
@@ -67,7 +70,7 @@ const Hero = ({ onHeroUpdate }) => {
   const playShowreelHandle = () =>{
   
     setPlayShowreel(true); 
-    showreelPlayer.current.play();
+    // showreelPlayer.current.play();
   }
 
   useEffect(() => {
@@ -76,7 +79,7 @@ const Hero = ({ onHeroUpdate }) => {
     console.log("Behavior before the component is added to the DOM");
     
     return () => {
-      console.log('removing ev listener')
+      // console.log('removing ev listener')
       heroMedia.current.removeEventListener('mousemove',mfMouseHandler);
     }
 
@@ -147,16 +150,21 @@ const Hero = ({ onHeroUpdate }) => {
       
         <section className={playShowreel ? "hero-showreel is_playing" : "hero-showreel is_hidden"} >                
 
+        {playShowreel && <> 
           <video 
             controls
-            
+            autoPlay                        
             className="hero-videoplayer" 
             ref={showreelPlayer}
             onCanPlay={(e)=> onShowreelReady(e)}
             onEnded={(e)=> onShowreelEnded(e)}          
           >
-            <source src={videoUrl} type="video/mp4" />
+<source src={videoUrl} type="video/mp4" />
+             
+
           </video>
+          </>
+          } 
 
           <div className="hero-close">
             <a className="hero-close-link" onClick={ ()=> closeShowreelHandle() }>close showreel</a> 
@@ -172,3 +180,6 @@ const Hero = ({ onHeroUpdate }) => {
 };
     
 export default Hero;
+
+
+
