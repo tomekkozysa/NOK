@@ -56,7 +56,7 @@ const Hero = ({ onHeroUpdate }) => {
 
   const onShowreelReady = (e) =>{}
   const onLoopReady = (e) =>{
-    loopPlayer.current.play();
+    // loopPlayer.current.play();
   }
 
   const onShowreelEnded = (e) =>{
@@ -79,7 +79,8 @@ const Hero = ({ onHeroUpdate }) => {
 
   useEffect(() => {
 
-    heroMedia.current.addEventListener('mousemove',mfMouseHandler);
+    heroMedia.current.addEventListener('mousemove',mfMouseHandler);    
+
     console.log("Behavior before the component is added to the DOM");
     
     return () => {
@@ -126,32 +127,38 @@ const Hero = ({ onHeroUpdate }) => {
 
 
       <section className="home-page-hero" ref={heroMedia} >  
-        <section className={playShowreel ? "hero-loop is_hidden" : "hero-loop is_playing"} >        
-          <div className="hero-background" >
-          
-          <video muted autoPlay loop playsinline
-            className="hero-loopplayer"
-            onCanPlay={onLoopReady}
-            ref={loopPlayer}
-          >
-            <source src={loopUrl} type="video/mp4" />
-          </video>
 
-          </div> 
-            
+
+
+        <section className={playShowreel ? "hero-loop is_hidden" : "hero-loop is_playing"} >        
+          <div className="hero-background">          
+
+          {/* <img src={loopUrl} alt="An explosion of colors." className="hero-loopplayer" /> */}
+
+            <video 
+              
+              playsInline
+              muted 
+              autoPlay
+              
+              loop
+              className="hero-loopplayer"
+              onCanPlay={onLoopReady}
+              ref={loopPlayer}
+             
+            >
+              <source src={loopUrl} type="video/mp4" />
+            </video>
+          </div>            
           <div className="hero-copy">
             <h2 className="hero-statement">{HeroStatement}</h2>
             <a className="hero-cta-link" onClick={ ()=> {
-              playShowreelHandle();
-                
-              }
-               }>
+              playShowreelHandle();                
+              }}>
               {ShowreelCTA}
             </a>         
-
-        </div>
-        </section>
-       
+          </div>
+        </section>    
       
         <section className={playShowreel ? "hero-showreel is_playing" : "hero-showreel is_hidden"} >                
 
