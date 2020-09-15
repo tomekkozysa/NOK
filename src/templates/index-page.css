@@ -1,9 +1,8 @@
-
 .home-page-projects {
   max-width: var(--layout-maxw);
   margin: 5vh auto 0;
-  padding: 5vh 40px;
-  border-top: 1px solid var(--c-primary);
+  padding: 2vh 40px;
+  
 }
 
 
@@ -25,7 +24,10 @@
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
+
 }
+
+
 @keyframes main-projects {
   0% {
     top: 200px;
@@ -135,6 +137,22 @@
 
 
 
+.home-page-projects-filter{
+
+  position: sticky;
+  top: 80px;
+  width: 100%;
+  z-index: 10;
+  background-color:white;
+  padding:1em;
+  border-top: 1px solid var(--c-primary);
+
+}
+
+
+
+
+
 .projects-filter-headline {
   text-align: center;
   font-size: var(--fs-section-headline);
@@ -142,25 +160,40 @@
   color: var(--c-primary);
  
 }
+
+
+
+
 .projects-filter-items {
   list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
- 
+  align-items: center; 
 }
+
+
 .projects-filter-item {
-  /* text-transform: uppercase; */
   display: inline-block;
   padding: 0.5em 2em;
-  /* font-size:var(--projects-font-size-Desktop); */
-   
+  color: var(--c-text);
+  text-decoration:none;
+  transition: color .3s;
+  text-align: center;
+  
+}
+
+.projects-filter-item:hover{
+  color: #a0191e;
 }
 /* phones, less than 768px */
 
 .chosen {
   border-bottom: 3px solid var(--c-primary);
 }
+
+
+
+
 
 /* mediaa query for phone size */
 /* resourses  http://devfacts.com/media-queries-breakpoints-2020/ */
@@ -203,10 +236,29 @@
          display: block;
     text-align: center; 
   }
-    .projects-filter-items{ 
+  
+  .projects-filter-items{ 
           display: block;
     text-align: center; 
   }
+ 
+ .chosen{
+
+   display: inline-block;
+
+   
+}
+ .home-page-projects-filter {
+    position: sticky;
+    top: 80px;
+    /* margin-bottom: 100px; */
+    /* bottom: 50px; */
+    /* position: fixed; */
+    /* top: 0; */
+    width: 100%;
+    z-index: 10;
+    background-color:white;
+}
   
 }
 
