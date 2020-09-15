@@ -60,6 +60,18 @@
     --exp-width-Desktop: 80%; 
     --exp-width-Tablet: 40%;
     --exp-width-Mobile: 35%; 
+
+
+
+    
+
+  --clip-bottom: calc(80vh - var(--clip-tops));
+  --clip-right: calc(100vw - var(--clip-sides));
+  --clip-top: var(--clip-tops);
+  --clip-left: var(--clip-sides);
+  --clip-sides: 50vw;
+  --clip-tops: 40vh;
+  
   
 
   
