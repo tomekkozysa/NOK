@@ -14,7 +14,7 @@ const Header = class extends React.Component {
     };
   }
 
-  toggleHamburger = () => {
+  toggleNav = () => {
     this.setState(
       {
         active: !this.state.active,
@@ -49,7 +49,7 @@ const Header = class extends React.Component {
                   ? "nav-toggle-button is_open"
                   : "nav-toggle-button"
               }
-              onClick={() => this.toggleHamburger()}
+              onClick={() => this.toggleNav()}
               width="30"
               height="30"
               viewBox="0 0 30 30"
@@ -79,7 +79,7 @@ const Header = class extends React.Component {
         </hgroup>
         <Navigation
           active={this.state.navBarActiveClass}
-          toggleHamburger={this.toggleHamburger}
+          toggleNav={this.toggleNav}
         />
       </header>
     );
