@@ -7,6 +7,7 @@ import "./global-pre.css";
 import "./global.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+import Footer from "../components/Footer"
 
 const TemplateWrapper = ({ children }) => {
   const { title, description, siteUrl } = useSiteMetadata();
@@ -60,7 +61,7 @@ const TemplateWrapper = ({ children }) => {
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" ></link>
-        
+
 
       </Helmet>
 
@@ -69,8 +70,11 @@ const TemplateWrapper = ({ children }) => {
 
       <Header />
 
-      <div className="layout-content">{children}</div>
-      {/* <Footer /> */}
+      <div className="layout-content">
+        {children}
+
+      </div>
+      <Footer />
     </div>
   );
 };
