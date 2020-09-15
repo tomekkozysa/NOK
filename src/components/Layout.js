@@ -7,6 +7,7 @@ import "./all.sass";
 import "./global.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+import Footer from "../components/Footer"
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -45,24 +46,24 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta property="og:image" 
-        
-        
-        content={`${withPrefix("/")}img/og-image.jpg`}
+        <meta property="og:image"
+
+
+          content={`${withPrefix("/")}img/og-image.jpg`}
         />
 
-        
+
 
 
       </Helmet>
 
       <Header />
-      
+
       <div className="layout-content">
         {children}
-        
+
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
