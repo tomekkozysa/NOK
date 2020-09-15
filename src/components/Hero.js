@@ -42,6 +42,8 @@ const Hero = ({ onHeroUpdate }) => {
 
   const heroMedia =  useRef();
   const showreelPlayer =  useRef();
+  const loopPlayer =  useRef();
+
   var evTimeStamp = Date.now();
 
   /* one day, this could be a randomised selection */
@@ -53,7 +55,9 @@ const Hero = ({ onHeroUpdate }) => {
 
 
   const onShowreelReady = (e) =>{}
-  const onLoopReady = (e) =>{}
+  const onLoopReady = (e) =>{
+    loopPlayer.current.play();
+  }
 
   const onShowreelEnded = (e) =>{
     closeShowreelHandle();
@@ -128,6 +132,7 @@ const Hero = ({ onHeroUpdate }) => {
           <video muted autoPlay loop playsinline
             className="hero-loopplayer"
             onCanPlay={onLoopReady}
+            ref={loopPlayer}
           >
             <source src={loopUrl} type="video/mp4" />
           </video>
