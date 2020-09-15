@@ -9,7 +9,7 @@ import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+  const { title, description, siteUrl } = useSiteMetadata();
   return (
     <div>
       <Helmet>
@@ -42,16 +42,19 @@ const TemplateWrapper = ({ children }) => {
         />
 
         <meta name="theme-color" content="#fff" />
-        <meta property="og:type" content="business.business" />
-        <meta property="og:url" content="/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={siteUrl} />
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content={`${withPrefix("/")}img/icons/nok-social.jpg`}
+          content={`${siteUrl}img/icons/nok-social.jpg`}
         />
-
+        <meta
+          property="twitter:image"
+          content={`${siteUrl}img/icons/nok-social.jpg`}
+        />
         <meta property="twitter:card" content="summary_large_image" />
       </Helmet>
 
