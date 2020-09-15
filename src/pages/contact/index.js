@@ -23,18 +23,17 @@ export default class Index extends React.Component {
           <h2 className="contact-page-headline">Contact</h2>
           <ul className="contact-page-primary-details">
             <li className="contact-page-detail">
-            <a href="tel:+442035596554">+44 20 355 96554</a>
+            <a href="tel:+4420331309004">+44 20 33130 9004</a>
             </li>
             <li className="contact-page-detail">
-            <a href="mailto:info@nextofkin.com">someone@nextofkin.com</a>
+            <a href="mailto:info@nextofkin.com">info@kinpartners.com</a>
             </li>
             
           </ul>
           <address  className="contact-page-detail contact-address">
-                The Green House <br />
-                244-254 Cambridge Heath Rd<br />
-                London<br />
-                E2 9DA<br />
+                King's court <br />
+                2-16 Goodge Street<br />
+                London W1T 2QA<br />
             </address>
 
           <h2 className="contact-page-headline social-headline">Social</h2>
