@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 // import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-import "./all.sass";
+import "./global-pre.css";
 import "./global.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
@@ -56,7 +56,16 @@ const TemplateWrapper = ({ children }) => {
           content={`${siteUrl}/img/icons/nok-social.jpg`}
         />
         <meta property="twitter:card" content="summary_large_image" />
+
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" ></link>
+        
+
       </Helmet>
+
+
+
 
       <Header />
 

@@ -15,13 +15,13 @@ module.exports = {
         name: "uploads",
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Roboto Mono\:400,700`],
-        display: "swap",
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`Roboto Mono\:400,700`],
+    //     display: "swap",
+    //   },
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
