@@ -11,7 +11,7 @@ const heroQuery = graphql`
       frontmatter {
         title
         HeroStatement
-        videoUrl
+        videoUrl 
         ShowreelCTA
         image {
           childImageSharp {
@@ -37,59 +37,37 @@ const heroQuery = graphql`
 const Hero = ({ onHeroUpdate }) => {
 
   const data = useStaticQuery(heroQuery);
-  const { HeroStatement, ShowreelCTA, videoUrl } = data.markdownRemark.frontmatter;
+  const { HeroStatement, ShowreelCTA, videoUrl, blurbs } = data.markdownRemark.frontmatter;
   const [playShowreel, setPlayShowreel] = useState(false);
 
   const heroMedia =  useRef();
   const showreelPlayer =  useRef();
   var evTimeStamp = Date.now();
-  
-  
 
-  const onShowreelReady = (e) =>{
-    
-  }
+  /* one day, this could be a randomised selection */
+  const loopUrl = blurbs[0].loopLink;
+
+
+  const onShowreelReady = (e) =>{}
+  const onLoopReady = (e) =>{}
+
   const onShowreelEnded = (e) =>{
-
-    
-    // onHeroUpdate('ended');
     closeShowreelHandle();
-
-
   }
 
-  const onLoopReady = (e) =>{
-    // onHeroUpdate('onLoopReady');
-    // e.currentTarget.play();
-  }
+  
  
   const closeShowreelHandle = () =>{
     setPlayShowreel(false); 
-    console.log('showreelPlayer',showreelPlayer);
     showreelPlayer.current.pause();
     showreelPlayer.current.currentTime=0;
-
-    
-    // heroMedia.current.addEventListener('mousemove',mfMouseHandler);
+  
   }
+  
   const playShowreelHandle = () =>{
-    
-    
+  
     setPlayShowreel(true); 
-
     showreelPlayer.current.play();
-    
-    // enable video player 
-    // wait for the clip to load
-    // hide image ( or loop ) + hero copy & CTA
-    // show video player, autoplay video 
-    
-    // heroMedia.current.removeEventListener('mousemove', mfMouseHandler);
-
-    
-    // onHeroUpdate('start');
-    
-
   }
 
   useEffect(() => {
@@ -104,16 +82,6 @@ const Hero = ({ onHeroUpdate }) => {
 
     
   }, []);
-
-//   useEffect(() => {
-//     // events.forEach(event => document.addEventListener(event, onClick))
-//     heroMedia.current.addEventListener('mousemove',mfMouseHandler);
-//     console.log('adding ev listener')
-//     // return () => {
-//     //   console.log('removing ev listener')
-//     //   heroMedia.current.removeEventListener('mousemove',mfMouseHandler);
-//     // }
-// })
 
 
 
@@ -131,10 +99,8 @@ const Hero = ({ onHeroUpdate }) => {
     let distanceX = Math.abs(centerX - e.x);
     let distanceY = Math.abs(centerY - e.y);
     
-  
     let left = Math.abs(distanceX) + "px";
     let right = mainframe.offsetWidth - distanceX + "px";
-  
     let top = distanceY / 1 + "px";
     let bottom = mainframe.offsetHeight - distanceY / 1 + "px";
   
@@ -152,8 +118,7 @@ const Hero = ({ onHeroUpdate }) => {
     return ( 
 
 
-        <section className="home-page-hero" ref={heroMedia} >  
-        
+        <section className="home-page-hero" ref={heroMedia} >         
               
 
       
@@ -164,17 +129,16 @@ const Hero = ({ onHeroUpdate }) => {
             className="hero-loopplayer"
             onCanPlay={onLoopReady}
           >
-            <source src="https://res.cloudinary.com/fifteennine/video/upload/e_saturation:-100/v1599207607/_/nok/NOK-Hero-Loop-v02-sml_1.mp4" type="video/mp4" />
+            <source src={loopUrl} type="video/mp4" />
           </video>
 
           </div> 
             
           <div className="hero-copy">
-            <h2>{HeroStatement}</h2>
+            <h2 className="hero-statement">{HeroStatement}</h2>
             <a className="hero-cta-link" onClick={ ()=> {
               playShowreelHandle();
-                // heroMedia.current.removeEventListener('mousemove',mfMouseHandler);
-                // setPlayShowreel(true);
+                
               }
                }>
               {ShowreelCTA}
@@ -184,12 +148,11 @@ const Hero = ({ onHeroUpdate }) => {
         </section>
        
       
-        <section className={playShowreel ? "hero-showreel is_playing" : "hero-showreel is_hidden"} >        
-        
+        <section className={playShowreel ? "hero-showreel is_playing" : "hero-showreel is_hidden"} >                
 
           <video 
             controls
-            muted 
+            
             autoPlay 
             className="hero-videoplayer" 
             ref={showreelPlayer}
