@@ -125,7 +125,7 @@ const Hero = ({ onHeroUpdate }) => {
         <section className={playShowreel ? "hero-loop is_hidden" : "hero-loop is_playing"} >        
           <div className="hero-background" >
           
-          <video muted autoPlay loop
+          <video muted autoPlay loop playsinline
             className="hero-loopplayer"
             onCanPlay={onLoopReady}
           >
