@@ -56,7 +56,11 @@ const AboutPage = ({ data }) => {
           {post.frontmatter.pageCopy.blurbs.map((blurb, key) => {
             return (<div key={key} className="about-page-profile">
               <div className="profile-img-wrapper">
-                <Img className="profile-img" alt="Logo" fluid={blurb.image.childImageSharp.fluid} />
+                <Img 
+                
+                placeholderStyle = {{opacity:0}}
+                backgroundColor = '#333'
+                className="profile-img" alt="Logo" fluid={blurb.image.childImageSharp.fluid} />
 
               </div>
               <div className="about-page-profile-text">
