@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Next Of Kin",
     description: "Next of Kin talents and projects",
+    siteUrl: "https://dazzling-euler-baa9cf.netlify.app",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
