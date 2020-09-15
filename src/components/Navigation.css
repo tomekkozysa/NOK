@@ -23,8 +23,19 @@
 .navigation-list-link{
     color:var(--c-secondary-accent);
     font-size: var( --fs-navigation);
+    text-decoration: none;
 }
 .navigation-list-link:hover{
     color:var(--c-primary);
     /* font-size: var( --fs-navigation); */
+}
+
+
+@media (max-width: 575.98px) {
+
+    .navigation-list-link{
+        font-size: var(--fs-navigation-mobile);
+    }
+
+    
 }

@@ -6,19 +6,8 @@
 }
 
 
-/* .nok-project {
-  /* height changes the after element */
-  /* --exp-height: 40px;
-  --exp-width: 80%;  */
-  /* width changes how much of the layout width is used */
-  /* --default-width: 100%; */
-  /* 
-  this isn't used:
-  --exp-width: 100%; */
-/* } */
-
 .nok-projects-wrapper {
-  /* background: red; */
+  
   position: relative;
   animation: main-projects;
   animation-duration: 0.5s;
@@ -28,16 +17,8 @@
 }
 
 
-@keyframes main-projects {
-  0% {
-    top: 200px;
-    opacity: 0.3;
-  }
-  100% {
-    top: 0px;
-    opacity: 1;
-  }
-}
+
+
  /* there are two classes now just one class has the all style*/
 .nok-project {
   /* min-height:70vh; */
@@ -48,7 +29,6 @@
   /* width: var(--default-width); */
   position: relative;
 }
-
 
 
  .project-img-wrapper {
@@ -135,14 +115,10 @@
   
 }
 
-
-
 .home-page-projects-filter{
-
  
   width: 100%;
-  /* padding:1em; */
-  
+  /* padding:1em; */  
 
 }
 
@@ -152,7 +128,7 @@
   border: 1px solid var(--c-primary);
   border-width:0 0 1px 0;
   position: sticky;
-  top: 80px;
+  top: var(--header-height);
   z-index: 101;
   max-width:var(--layout-maxw);
 }
@@ -187,9 +163,9 @@
 
 .projects-filter-item {
   display: inline-block;
-  padding: 1em 1em .25em;
+  padding: 1em 1em .5em;
   color: var(--c-text);
-  font-size:18px;
+  font-size:var(--fs-filter-item);
   text-decoration:none;
   transition: color .3s;
   text-align: center;
@@ -218,6 +194,13 @@
    .home-page-projects{
      padding: 5vh 0;
    }
+
+
+   .nok-project-heading {
+    font-size:var(--fs-project-heading-mobile);
+   }
+
+
    .project-img-wrapper:after {
      display: contents;
    }
@@ -237,20 +220,26 @@
   }
   .nok-project-text{
     align-self:flex-end;
-    padding:  0 2em 0  var(--alt-padding-mobile);
+    padding:  0 var(--padding-mobile) 0  var(--alt-padding-mobile);
   }
   .nok-project:nth-child(even) .nok-project-text{
-      padding: 0  var(--alt-padding-mobile) 0 1em;
+      padding: 0  var(--alt-padding-mobile) 0 var(--padding-mobile);
+  }
+
+
+  .projects-filter-headline{
+    
+    font-size: var(--fs-filter-headline-mobile);
   }
   .projects-filter-item{
-    font-size: var(--fs-body-Mobile);
+    font-size: var(--fs-filter-item-mobile);
     display: block;
     text-align: center; 
-  padding: .5em 1em .25em;
+    padding: .25em 1em;
   }
   
   .projects-filter-items-list{ 
-          display: block;
+    display: block;
     text-align: center; 
   }
  
@@ -274,61 +263,13 @@
   
 }
 
-/* @media (max-width: 576px) {
-    .nok-project-text{
-    font-size: var(--fs-body-Mobile);
+@keyframes main-projects {
+  0% {
+    top: 200px;
+    opacity: 0.3;
   }
-  .nok-project-heading{
-    font-size: var(--fs-project-heading-mobile);
-    font-weight:bold;
+  100% {
+    top: 0px;
+    opacity: 1;
   }
-    .projects-filter-item{
-    font-size: var( --fs-body-Mobile);
-  }
-  .projects-filter-items{
-         display: block;
-    text-align: center;
-  }
-.projects-filter-headline{
-  font-size: var( --fs-section-headline-Mobile);
-  font-weight: bold;
 }
- 
-} */
-
-/* media queries for tablets  */
-
-/* @media (min-width: 768px) {
-  .nok-project-text{
-    font-size: var( --fs-body-Tablet);
-  }
-  .nok-project-heading{
-    font-size: var(--fs-project-heading-Tablet);
-    font-weight:bold;
-  }
-    .projects-filter-item{
-    font-size: var(--fs-body-Tablet);
-  }
-.projects-filter-headline{
-  font-size: var( --fs-section-headline-Tablet);
-  font-weight: bold;
-}
-} */
-
-/* Desktop */
-/* @media (min-width: 1200px) {
-    .nok-project-text{
-    font-size: var(--projects-font-size-Desktop);
-  }
-  .nok-project-heading{
-    font-size: var(--fs-project-heading-Desktop);
-    font-weight:bold;
-  }
-    .projects-filter-item{
-    font-size: var(--projects-font-size-Desktop);
-  }
-.projects-filter-headline{
-  font-size: var( --fs-section-headline-Desktop);
-  font-weight: bold;
-}
-} */
