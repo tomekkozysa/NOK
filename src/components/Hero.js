@@ -118,10 +118,7 @@ const Hero = ({ onHeroUpdate }) => {
     return ( 
 
 
-        <section className="home-page-hero" ref={heroMedia} >         
-              
-
-      
+      <section className="home-page-hero" ref={heroMedia} >  
         <section className={playShowreel ? "hero-loop is_hidden" : "hero-loop is_playing"} >        
           <div className="hero-background" >
           
@@ -153,7 +150,6 @@ const Hero = ({ onHeroUpdate }) => {
           <video 
             controls
             
-            autoPlay 
             className="hero-videoplayer" 
             ref={showreelPlayer}
             onCanPlay={(e)=> onShowreelReady(e)}
