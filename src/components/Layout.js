@@ -49,11 +49,11 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content={`${siteUrl}img/icons/nok-social.jpg`}
+          content={`${siteUrl}/img/icons/nok-social.jpg`}
         />
         <meta
           property="twitter:image"
-          content={`${siteUrl}img/icons/nok-social.jpg`}
+          content={`${siteUrl}/img/icons/nok-social.jpg`}
         />
         <meta property="twitter:card" content="summary_large_image" />
       </Helmet>
