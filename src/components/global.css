@@ -6,6 +6,11 @@
 
     --layout-mt:10vh;
 
+
+    --alt-padding-mobile: 20vw;
+
+
+    
     
     --ff-primary: "Roboto Mono";
     
@@ -72,6 +77,11 @@
   --clip-sides: 50vw;
   --clip-tops: 40vh;
   
+
+  --clip-bottom-mobile:100%;
+  --clip-right-mobile: 100%;
+  --clip-top-mobile: 0;
+  --clip-left-mobile: 0;
   
 
   

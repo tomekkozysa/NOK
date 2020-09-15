@@ -227,25 +227,20 @@
     display: block;
   }
   .project-img-wrapper {
-    /* width: 100%;
-    flex: 2 2;
-    position: relative;
-    margin-bottom: 2em;
-    align-self: flex-start; */
-    padding: 0 0 20px 100px;
+    padding: 0 0 20px var(--alt-padding-mobile);
   }
   .nok-project:nth-child(even) {
    width: 100%;
   }
   .nok-project:nth-child(even) .project-img-wrapper{
-   padding: 0 100px 20px 0;
+   padding: 0  var(--alt-padding-mobile) 20px 0;
   }
   .nok-project-text{
     align-self:flex-end;
-    padding:  0 2em 0 5em;
+    padding:  0 2em 0  var(--alt-padding-mobile);
   }
   .nok-project:nth-child(even) .nok-project-text{
-      padding: 0 5em 0 1em;
+      padding: 0  var(--alt-padding-mobile) 0 1em;
   }
   .projects-filter-item{
     font-size: var(--fs-body-Mobile);
