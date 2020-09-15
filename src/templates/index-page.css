@@ -146,9 +146,10 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
- 
+  align-items: center; 
 }
+
+
 .projects-filter-item {
   /* text-transform: uppercase; */
   display: inline-block;
@@ -161,6 +162,18 @@
 .chosen {
   border-bottom: 3px solid var(--c-primary);
 }
+ .home-page-projects-filter{
+      position: sticky;
+    top: 80px;
+    /* margin-bottom: 100px; */
+    /* bottom: 50px; */
+    /* position: fixed; */
+    /* top: 0; */
+    width: 100%;
+    z-index: 10;
+    background-color:white;
+
+  }
 
 /* mediaa query for phone size */
 /* resourses  http://devfacts.com/media-queries-breakpoints-2020/ */
@@ -207,6 +220,22 @@
           display: block;
     text-align: center; 
   }
+ 
+ .chosen{
+   display: -webkit-inline-box;
+   
+ }
+ .home-page-projects-filter {
+    position: sticky;
+    top: 80px;
+    /* margin-bottom: 100px; */
+    /* bottom: 50px; */
+    /* position: fixed; */
+    /* top: 0; */
+    width: 100%;
+    z-index: 10;
+    background-color:white;
+}
   
 }
 
