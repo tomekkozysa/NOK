@@ -8,6 +8,7 @@ const ProjectsSection = ({ projects }) => {
   const [startAnimation, setStartAnimation] = useState(false);
 
   const handleFilterChoice = (event) => {
+    event.preventDefault()
     const filterParam = event.target.id.toLowerCase();
     if (filterParam === filter) {
       setFilter(null);
@@ -22,6 +23,7 @@ const ProjectsSection = ({ projects }) => {
       setProjectsToDisplay(filteredProjects);
       setStartAnimation(true);
     }
+
   };
 
   const getClassForFilterItem = (category, filter) => {
@@ -43,7 +45,11 @@ const ProjectsSection = ({ projects }) => {
               id={category}
               onClick={handleFilterChoice}
             >
-              {category}
+              <a href="#" id={category}
+                onClick={handleFilterChoice} className="projects-filter-link"
+              >{category}
+
+              </a>
             </li>
           ))}
         </ul>
