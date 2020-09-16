@@ -31,6 +31,13 @@
   
   font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
 
+  opacity:0;
+  animation: hero-statement;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+
 }
 .hero-copy {
   box-sizing: border-box;
@@ -192,4 +199,14 @@
 .hero-showreel.is_hidden{
   opacity:0;
   transform:scale(.85);
+}
+
+
+@keyframes hero-statement {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
