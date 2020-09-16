@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Next Of Kin",
-    description: "Next of Kin talents and projects",
+    title: "Next of Kin",
+    description: "Next of Kin is the home of iconic talent. We tell incredible stories that surprise, delight and inspire audiences around the world.",
     siteUrl: "https://dazzling-euler-baa9cf.netlify.app",
   },
   plugins: [
