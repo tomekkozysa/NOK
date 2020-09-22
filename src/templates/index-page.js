@@ -16,10 +16,18 @@ export const IndexPageTemplate = ({
   // description,
   // intro,
   projects,
+  HeroStatement,
+  ShowreelCTA,
+  videoUrl,
+  blurbs
 }) => {
   return (
     <section className="home-page">
-      <Hero />
+      <Hero 
+        HeroStatement={HeroStatement}
+        ShowreelCTA={ShowreelCTA}
+        videoUrl={videoUrl}
+        blurbs={blurbs}/>
       <ProjectsSection projects={projects} />
     </section>
   );
@@ -40,18 +48,18 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   const projects = shuffle(data.projects.nodes);
+  const { HeroStatement, ShowreelCTA, videoUrl, blurbs } = data.markdownRemark.frontmatter;
 
   return (
     <Layout>
       <IndexPageTemplate
         // image={frontmatter.image}
         title={frontmatter.title}
-        // heading={frontmatter.heading}
-        // subheading={frontmatter.subheading}
-        // mainpitch={frontmatter.mainpitch}
-        // description={frontmatter.description}
-
         projects={projects}
+        HeroStatement={HeroStatement}
+        ShowreelCTA={ShowreelCTA}
+        videoUrl={videoUrl}
+        blurbs={blurbs}
       />
     </Layout>
   );
@@ -71,7 +79,20 @@ export const pageQuery = graphql`
   query IndexPageTemplateX {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
+           title
+        HeroStatement
+        videoUrl 
+        ShowreelCTA
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        blurbs{
+          loopLink
+        }
       }
     }
     projects: allMarkdownRemark(

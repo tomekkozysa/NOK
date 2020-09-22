@@ -34,10 +34,9 @@ const heroQuery = graphql`
 
 
 
-const Hero = ({ onHeroUpdate }) => {
+const Hero = ({ onHeroUpdate, HeroStatement, ShowreelCTA, videoUrl, blurbs }) => {
 
-  const data = useStaticQuery(heroQuery);
-  const { HeroStatement, ShowreelCTA, videoUrl, blurbs } = data.markdownRemark.frontmatter;
+  // const data = useStaticQuery(heroQuery);
   const [playShowreel, setPlayShowreel] = useState(false);
 
   const heroMedia =  useRef();
