@@ -7,20 +7,14 @@ import Hero from "../components/Hero";
 import "./index-page.css";
 import { shuffle } from "../utils";
 
-export const IndexPageTemplate = ({
-  // image,
-  title,
-  // heading,
-  // subheading,
-  // mainpitch,
-  // description,
-  // intro,
-  projects,
-}) => {
+export const IndexPageTemplate = ({ title, projects, featuredProjects }) => {
   return (
     <section className="home-page">
       <Hero />
-      <ProjectsSection projects={projects} />
+      <ProjectsSection
+        projects={projects}
+        featuredProjects={featuredProjects}
+      />
     </section>
   );
 };
@@ -39,19 +33,15 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  const projects = shuffle(data.projects.nodes);
+  const projects = data.projects.nodes;
+  const featuredProjects = shuffle(data.featuredProjects.nodes);
 
   return (
     <Layout>
       <IndexPageTemplate
-        // image={frontmatter.image}
         title={frontmatter.title}
-        // heading={frontmatter.heading}
-        // subheading={frontmatter.subheading}
-        // mainpitch={frontmatter.mainpitch}
-        // description={frontmatter.description}
-
         projects={projects}
+        featuredProjects={featuredProjects}
       />
     </Layout>
   );
@@ -81,6 +71,31 @@ export const pageQuery = graphql`
       totalCount
       nodes {
         frontmatter {
+          category
+          description
+          title
+          featured
+          image {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+    featuredProjects: allMarkdownRemark(
+      sort: { order: DESC, fields: frontmatter___date }
+      filter: {
+        fields: { slug: { regex: "/projects/" } }
+        frontmatter: { featured: { eq: true } }
+      }
+    ) {
+      totalCount
+      nodes {
+        frontmatter {
+          featured
           category
           description
           title
