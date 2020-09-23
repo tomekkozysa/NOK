@@ -19,7 +19,8 @@ export const IndexPageTemplate = ({
   HeroStatement,
   ShowreelCTA,
   videoUrl,
-  blurbs
+  blurbs,
+  featuredProjects
 }) => {
   return (
     <section className="home-page">
@@ -28,7 +29,9 @@ export const IndexPageTemplate = ({
         ShowreelCTA={ShowreelCTA}
         videoUrl={videoUrl}
         blurbs={blurbs}/>
-      <ProjectsSection projects={projects} />
+      <ProjectsSection
+       projects={projects}
+       featuredProjects={featuredProjects} />
     </section>
   );
 };
@@ -47,19 +50,20 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  const projects = shuffle(data.projects.nodes);
+  const projects = data.projects.nodes;
+  const featuredProjects = shuffle(data.featuredProjects.nodes);
   const { HeroStatement, ShowreelCTA, videoUrl, blurbs } = data.markdownRemark.frontmatter;
 
   return (
     <Layout>
       <IndexPageTemplate
-        // image={frontmatter.image}
         title={frontmatter.title}
         projects={projects}
         HeroStatement={HeroStatement}
         ShowreelCTA={ShowreelCTA}
         videoUrl={videoUrl}
         blurbs={blurbs}
+        featuredProjects={featuredProjects}
       />
     </Layout>
   );
@@ -102,6 +106,31 @@ export const pageQuery = graphql`
       totalCount
       nodes {
         frontmatter {
+          category
+          description
+          title
+          featured
+          image {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+    featuredProjects: allMarkdownRemark(
+      sort: { order: DESC, fields: frontmatter___date }
+      filter: {
+        fields: { slug: { regex: "/projects/" } }
+        frontmatter: { featured: { eq: true } }
+      }
+    ) {
+      totalCount
+      nodes {
+        frontmatter {
+          featured
           category
           description
           title

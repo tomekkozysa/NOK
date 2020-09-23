@@ -31,6 +31,12 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "image", widget: image }
       - { label: "Description", name: "description", widget: "text" }
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
 
   - name: "pages"
     label: "Pages"

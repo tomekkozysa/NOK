@@ -2,11 +2,10 @@ import React, { useState, useRef } from "react";
 import Img from "gatsby-image";
 const CATEGORIES = ["TV and Theatre", "Short Form and Commercial", "Films"];
 
-const ProjectsSection = ({ projects }) => {
-  const [projectsToDisplay, setProjectsToDisplay] = useState(projects);
+const ProjectsSection = ({ projects, featuredProjects }) => {
+  const [projectsToDisplay, setProjectsToDisplay] = useState(featuredProjects);
   const [filter, setFilter] = useState(null);
   const [startAnimation, setStartAnimation] = useState(false);
-
   const handleFilterChoice = (event) => {
     event.preventDefault();
     scrollUp();
@@ -14,7 +13,7 @@ const ProjectsSection = ({ projects }) => {
     if (filterParam === filter) {
       setFilter(null);
       setStartAnimation(false);
-      setProjectsToDisplay(projects);
+      setProjectsToDisplay(featuredProjects);
     } else {
       setFilter(filterParam);
       // ToDo  -- refactor two lines below
@@ -24,7 +23,6 @@ const ProjectsSection = ({ projects }) => {
       setProjectsToDisplay(filteredProjects);
       setStartAnimation(true);
     }
-
   };
 
   const getClassForFilterItem = (category, filter) => {
@@ -34,38 +32,31 @@ const ProjectsSection = ({ projects }) => {
       : className;
   };
 
-  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop-200)   
-  const allProjects = useRef(null)
-  const scrollUp = () => scrollToRef(allProjects)
-
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 200);
+  const allProjects = useRef(null);
+  const scrollUp = () => scrollToRef(allProjects);
 
   return (
     <section>
-        <hr className="projects-filter-ruler" role="presentation" />
-        <h2 className="projects-filter-headline">Our work</h2>
-        <div className="projects-filter-items">
-          <ul className="projects-filter-items-list">
-              {CATEGORIES.map((category) => (
-                
-                <li
-                  key={category}             
-                >
-                  <a href="#" 
-                  id={category}
-                  className={getClassForFilterItem(category, filter)}
-                  onClick={handleFilterChoice}
-                  >{category}
-                  </a>
-                </li>
-              ))}
-            </ul>
-        </div>        
+      <hr className="projects-filter-ruler" role="presentation" />
+      <h2 className="projects-filter-headline">Our work</h2>
+      <div className="projects-filter-items">
+        <ul className="projects-filter-items-list">
+          {CATEGORIES.map((category) => (
+            <li key={category}>
+              <a
+                href="#"
+                id={category}
+                className={getClassForFilterItem(category, filter)}
+                onClick={handleFilterChoice}
+              >
+                {category}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
       <section className="home-page-projects" ref={allProjects}>
-        {/* <div className="home-page-projects-filter">
-        
-          
-        </div> */}
-        
         <div
           className={startAnimation ? "nok-projects-wrapper" : ""}
           onAnimationEnd={() => setStartAnimation(false)}
@@ -76,8 +67,8 @@ const ProjectsSection = ({ projects }) => {
                 <Img
                   fluid={project.image.childImageSharp.fluid}
                   alt={project.title}
-                  placeholderStyle = {{opacity:0}}
-                  backgroundColor = '#333'
+                  placeholderStyle={{ opacity: 0 }}
+                  backgroundColor="#333"
                 />
               </div>
               <div className="nok-project-text">
@@ -89,7 +80,7 @@ const ProjectsSection = ({ projects }) => {
           ))}
         </div>
       </section>
-    </section> 
+    </section>
   );
 };
 
