@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Img from "gatsby-image";
+// import linkicon from "../img/linkicon.svg";
 const CATEGORIES = ["TV and Theatre", "Short Form and Commercial", "Films"];
 
 const ProjectsSection = ({ projects, featuredProjects }) => {
@@ -75,6 +76,19 @@ const ProjectsSection = ({ projects, featuredProjects }) => {
                 <p className="nok-project-category">{project.category}</p>
                 <h3 className="nok-project-heading">{project.title}</h3>
                 <p className="nok-project-text-copy">{project.description}</p>
+                {project.externalURL &&
+                  <a href={project.externalURL} target="_blank">
+                    <svg width="43" height="40" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M43.0555 12C43.0555 10.8954 42.1601 10 41.0555 10H23.0555C21.951 10 21.0555 10.8954 21.0555 12C21.0555 13.1046 21.951 14 23.0555 14H39.0555V30C39.0555 31.1046 39.951 32 41.0555 32C42.1601 32 43.0555 31.1046 43.0555 30V12ZM23.4698 32.4142L42.4697 13.4142L39.6413 10.5858L20.6413 29.5858L23.4698 32.4142Z" fill="#922825" />
+                      <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="17" width="35" height="35">
+                        <rect x="2" y="19" width="31" height="31" rx="3" stroke="#922825" stroke-width="4" />
+                      </mask>
+                      <g mask="url(#mask0)">
+                        <path d="M35 36.7436H16.5789V17H0V52H35V36.7436Z" fill="#922825" />
+                      </g>
+                    </svg>
+                  </a>
+                }
               </div>
             </div>
           ))}

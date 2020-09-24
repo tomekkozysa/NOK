@@ -24,14 +24,14 @@ export const IndexPageTemplate = ({
 }) => {
   return (
     <section className="home-page">
-      <Hero 
+      <Hero
         HeroStatement={HeroStatement}
         ShowreelCTA={ShowreelCTA}
         videoUrl={videoUrl}
-        blurbs={blurbs}/>
+        blurbs={blurbs} />
       <ProjectsSection
-       projects={projects}
-       featuredProjects={featuredProjects} />
+        projects={projects}
+        featuredProjects={featuredProjects} />
     </section>
   );
 };
@@ -109,6 +109,7 @@ export const pageQuery = graphql`
           category
           description
           title
+          externalURL
           featured
           image {
             childImageSharp {
@@ -134,6 +135,7 @@ export const pageQuery = graphql`
           category
           description
           title
+          externalURL
           image {
             childImageSharp {
               fluid(maxWidth: 400, quality: 100) {
