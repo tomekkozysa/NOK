@@ -3,84 +3,61 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Img from "gatsby-image";
-import Content, { HTMLContent } from "../components/Content";
 import "./about.css";
 
 
 
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-
-  const PageContent = contentComponent || Content;
-
+export const AboutPageTemplate = ({ aboutIntro, blurbs, isTemplate }) => {
   return (
     <section className="about-page">
 
       <h2 className="about-page-title">
-        {title}
+        About
       </h2>
 
-      <div class="about-page-intro">
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      <div className="about-page-intro">
+        <p>{aboutIntro}</p>
       </div>
+
+      <div className="about-page-profiles">
+
+        {blurbs.map((blurb, key) => {
+          return (<div key={key} className="about-page-profile">
+            <div className="profile-img-wrapper">
+              {isTemplate ? <img src={blurb.image} /> : <Img
+
+                placeholderStyle={{ opacity: 0 }}
+                backgroundColor='#333'
+                className="profile-img" alt="Logo" fluid={blurb.image.childImageSharp.fluid} />
+              }
+            </div>
+            <div className="about-page-profile-text">
+              <p className="about-page-profile-text-copy">{blurb.text} </p>
+            </div>
+          </div>)
+        })
+        }
+
+
+      </div>
+
+
 
     </section>
   );
 };
 
-AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func
-};
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
   console.log(post)
   return (
     <Layout>
-
-
-      <section className="about-page">
-
-        <h2 className="about-page-title">
-          About
-      </h2>
-
-        <div className="about-page-intro">
-          <p>{post.frontmatter.aboutIntro}</p>
-        </div>
-
-        <div className="about-page-profiles">
-
-          {post.frontmatter.pageCopy.blurbs.map((blurb, key) => {
-            return (<div key={key} className="about-page-profile">
-              <div className="profile-img-wrapper">
-                <Img 
-                
-                placeholderStyle = {{opacity:0}}
-                backgroundColor = '#333'
-                className="profile-img" alt="Logo" fluid={blurb.image.childImageSharp.fluid} />
-
-              </div>
-              <div className="about-page-profile-text">
-                <p className="about-page-profile-text-copy">{blurb.text} </p>
-              </div>
-            </div>)
-          })
-          }
-
-
-        </div>
-
-
-
-      </section>
-
-
-
-
-
+      < AboutPageTemplate
+        aboutIntro={post.frontmatter.aboutIntro}
+        blurbs={post.frontmatter.pageCopy.blurbs}
+        isTemplate={false}
+      />
 
     </Layout>
   );

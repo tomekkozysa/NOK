@@ -7,14 +7,31 @@ import Hero from "../components/Hero";
 import "./index-page.css";
 import { shuffle } from "../utils";
 
-export const IndexPageTemplate = ({ title, projects, featuredProjects }) => {
+export const IndexPageTemplate = ({
+  // image,
+  title,
+  // heading,
+  // subheading,
+  // mainpitch,
+  // description,
+  // intro,
+  projects,
+  HeroStatement,
+  ShowreelCTA,
+  videoUrl,
+  blurbs,
+  featuredProjects
+}) => {
   return (
     <section className="home-page">
-      <Hero />
+      <Hero
+        HeroStatement={HeroStatement}
+        ShowreelCTA={ShowreelCTA}
+        videoUrl={videoUrl}
+        blurbs={blurbs} />
       <ProjectsSection
         projects={projects}
-        featuredProjects={featuredProjects}
-      />
+        featuredProjects={featuredProjects} />
     </section>
   );
 };
@@ -35,12 +52,17 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   const projects = data.projects.nodes;
   const featuredProjects = shuffle(data.featuredProjects.nodes);
+  const { HeroStatement, ShowreelCTA, videoUrl, blurbs } = data.markdownRemark.frontmatter;
 
   return (
     <Layout>
       <IndexPageTemplate
         title={frontmatter.title}
         projects={projects}
+        HeroStatement={HeroStatement}
+        ShowreelCTA={ShowreelCTA}
+        videoUrl={videoUrl}
+        blurbs={blurbs}
         featuredProjects={featuredProjects}
       />
     </Layout>
@@ -61,7 +83,20 @@ export const pageQuery = graphql`
   query IndexPageTemplateX {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
+           title
+        HeroStatement
+        videoUrl 
+        ShowreelCTA
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        blurbs{
+          loopLink
+        }
       }
     }
     projects: allMarkdownRemark(
@@ -74,6 +109,7 @@ export const pageQuery = graphql`
           category
           description
           title
+          externalURL
           featured
           image {
             childImageSharp {
@@ -99,6 +135,7 @@ export const pageQuery = graphql`
           category
           description
           title
+          externalURL
           image {
             childImageSharp {
               fluid(maxWidth: 400, quality: 100) {
