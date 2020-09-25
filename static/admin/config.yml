@@ -37,7 +37,7 @@ collections:
           widget: "boolean",
           default: false,
         }
-      - { label: "External URL for projects", name: "externalURL", widget: "string" }
+      - { label: "External URL for projects", name: "externalURL", widget: "string", required: false }
 
   - name: "pages"
     label: "Pages"
