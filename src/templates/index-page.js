@@ -110,6 +110,7 @@ export const pageQuery = graphql`
           description
           title
           externalURL
+          externalURLLabel
           featured
           image {
             childImageSharp {
@@ -136,6 +137,7 @@ export const pageQuery = graphql`
           description
           title
           externalURL
+          externalURLLabel
           image {
             childImageSharp {
               fluid(maxWidth: 400, quality: 100) {

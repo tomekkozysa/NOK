@@ -110,9 +110,19 @@
 
 
 .nok-project-text-copy {
-  /* padding: 0 1em 2em; */
-  padding:1em 0 ;
-  
+  padding:1em 0;
+}
+
+
+.nok-project-more-link {
+  color:var(--c-primary);
+  text-decoration: underline;
+}
+.nok-project-more-link:hover {
+  text-decoration: none;
+}
+.nok-project-more-link:visited {
+  text-decoration: overline;
 }
 
 .home-page-projects-filter{
