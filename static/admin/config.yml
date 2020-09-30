@@ -19,6 +19,12 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "project",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Category",
@@ -37,8 +43,18 @@ collections:
           widget: "boolean",
           default: false,
         }
-      - { label: "Project external link label", name: "externalURLLabel", widget: "string", required: false }
-      - { label: "Project external link URL", name: "externalURL", widget: "string", required: false }
+      - {
+          label: "Project external link label",
+          name: "externalURLLabel",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Project external link URL",
+          name: "externalURL",
+          widget: "string",
+          required: false,
+        }
 
   - name: "pages"
     label: "Pages"
