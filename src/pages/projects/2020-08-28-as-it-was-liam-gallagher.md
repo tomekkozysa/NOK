@@ -1,5 +1,4 @@
 ---
-templateKey: project
 title: 'As It Was: Liam Gallagher'
 category:
   - Films
