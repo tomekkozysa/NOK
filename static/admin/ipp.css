@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.preview-index-page{
+    
+}
+.preview-index-page .home-page-content{
+    display: none;
+
+}
+.preview-index-page .hero-background{
+
+    --clip-top:0px;
+    --clip-right:100%;
+    --clip-bottom:100%;
+    --clip-left:0px;
+
+
+}

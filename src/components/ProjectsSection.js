@@ -38,7 +38,7 @@ const ProjectsSection = ({ projects, featuredProjects }) => {
   const scrollUp = () => scrollToRef(allProjects);
 
   return (
-    <section>
+    <section className="home-page-content">
       <hr className="projects-filter-ruler" role="presentation" />
       <h2 className="projects-filter-headline">Our work</h2>
       <div className="projects-filter-items">
