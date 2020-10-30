@@ -3,20 +3,29 @@
 
     background-color:var(--c-primary);
     padding: 1em;
-    text-align: right;
+    
     font-size: var(--fs-footer);  
 }
-
-.copy-right{
+.footer-copy{
     color:white;
-      
-    
+    display: flex;
+
 }
-.copy-right a{
+
+.footer-copy a{
     color: white;
     text-decoration: underline;
 }
 
+.footer-copyrights{
+    flex:1 2;
+    align-self: flex-start;
+}
+.footer-grads{
+    flex:1 1;
+    align-self: flex-end;
+    text-align: right;
+}
 @media (max-width: 575.98px) {
     .footer-main{
         font-size: var(--fs-footer-mobile);  

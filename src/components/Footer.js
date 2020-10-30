@@ -13,8 +13,9 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer-main">
-        <div>
-          <p className="copy-right">&copy;Next of Kin 2020. This website was built by graduates from <a href="https://codeyourfuture.io">CodeYourFuture</a></p>
+        <div className="footer-copy">
+          <span className="footer-copyrights">&copy;Next of Kin 2020. </span>
+          <span className="footer-grads">This website was built by graduates from <a href="https://codeyourfuture.io">CodeYourFuture</a></span>
         </div>
       </footer>
     );
