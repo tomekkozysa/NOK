@@ -75,11 +75,10 @@ const ProjectsSection = ({ projects, featuredProjects }) => {
               <div className="nok-project-text">
                 <p className="nok-project-category">{project.category}</p>
                 <h3 className="nok-project-heading">{project.title}</h3>
-                <p className="nok-project-text-copy">{project.description}&nbsp;
+                <p className="nok-project-text-copy">{project.description}</p>             
                 {project.externalURL && project.externalURLLabel && 
                   <a href={project.externalURL} target="_blank" className="nok-project-more-link"> {project.externalURLLabel}</a>
                 }   
-                </p>             
               </div>
             </div>
           ))}

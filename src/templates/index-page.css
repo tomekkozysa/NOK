@@ -84,12 +84,13 @@
   /* height: var(--exp-height); */
   /* color:var(--c-text-secondary); */
   color: var(--c-primary);
-  align-self: flex-end;
-  padding: 0 2em;
+  /* align-self: flex-end; */
+  align-self: center;
+    padding: 0 2em;
 }
 
 .nok-project-text-copy {
-  padding: 1em 0;
+  padding: 1em 0 0;
 }
 
 .nok-project-more-link {
