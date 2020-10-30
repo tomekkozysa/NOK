@@ -17,7 +17,7 @@
 .about-page-intro {
 }
 .about-page-profiles {
-  margin-top: 10vh;
+  
 }
 
 .about-page-profile:nth-child(even) {
@@ -27,7 +27,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60vh;
+  /* min-height: 60vh; */
+  margin-top: 5em;
 }
 
 .profile-img-wrapper {

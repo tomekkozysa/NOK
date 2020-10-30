@@ -14,12 +14,9 @@
 
 /* there are two classes now just one class has the all style*/
 .nok-project {
-  /* min-height:70vh; */
-  margin: 10vh auto 0;
+  margin: 8em auto 0;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
-  /* width: var(--default-width); */
   position: relative;
 }
 
