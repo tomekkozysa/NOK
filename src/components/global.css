@@ -24,6 +24,17 @@
       --fs-body-Mobile: 18px;
       --fs-body-Tablet: 16px;
 
+
+      /*      
+      homepage 
+
+      */
+
+      --fs-links:32px;
+      --fs-contact:24px;
+      --fs-contact-small:16px;
+
+
     /*  header */        
     --header-height: 240px;
     --header-width: auto;
@@ -31,7 +42,7 @@
 
     /* --header-logo-svg:url('../img/nextofkin.svg'); */
     --header-logo-svg:url('../img/nok-logo-full.svg');
-    --header-logo-height:120px;
+    --header-logo-height:60px;
     --header-logo-ptb:10px;
 
 
@@ -171,3 +182,4 @@ body{
     font-size: var(--fs-body-mobile);
   }
 }
+

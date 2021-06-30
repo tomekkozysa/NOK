@@ -35,14 +35,14 @@ const Header = class extends React.Component {
 
   render() {
     return (
-      <header className="header-main">
+      <header className="header-main"> 
         <hgroup className="header-content">
           <h1 className="header-logo">
             <Link className="header-logo-link" to="/">
               Next of Kin
             </Link>
           </h1>
-          <div className="nav-toggle">
+          {/* <div className="nav-toggle">
             <svg
               className={
                 this.state.active
@@ -75,12 +75,12 @@ const Header = class extends React.Component {
                 stroke="var(--c-primary)"
               />
             </svg>
-          </div>
+          </div> */}
         </hgroup>
-        <Navigation
+        {/* <Navigation
           active={this.state.navBarActiveClass}
           toggleNav={this.toggleNav}
-        />
+        /> */}
       </header>
     );
   }
