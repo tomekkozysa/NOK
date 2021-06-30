@@ -26,8 +26,8 @@ export const IndexPageTemplate = ({
       <div className="home-page-links">
         {/* <Link className="home-page-link" to={'/work'}> work </Link><br /> */}
         {/* <Link className="home-page-link" to={'/about'}> about </Link> */}
-        <p className="home-page-link"> about </p>
-        <p className="home-page-link"> work </p>
+        {/* <p className="home-page-link"> about </p>
+        <p className="home-page-link"> work </p> */}
       </div>
       
       <div className="home-page-contact">

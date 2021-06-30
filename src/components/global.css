@@ -36,7 +36,8 @@
 
 
     /*  header */        
-    --header-height: 240px;
+    /* --header-height: 240px; */
+    --header-height: 180px;
     --header-width: auto;
     --c-header:var(--fs-body-bgr);
 
