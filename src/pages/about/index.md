@@ -11,7 +11,7 @@ aboutIntro: >
   Collectively the three founders have built up a reputation working with extraordinary talent, telling powerful stories, throughout their careers and as such they have hit the ground running with their first production, a feature-documentary with a global icon, for cinematic release later this year.
 pageCopy:
   blurbs:
-    - image: /img/simon-oliveira-2x.png
+    - image: /img/simon-oliveira-2x.jpg
       text: >
         Simon Oliveira (Producer Founder)
 
@@ -23,7 +23,7 @@ pageCopy:
         Since 2013, Simon has been the Managing Director of KIN Partners, one of the leading independent sports and entertainment management companies globally. KIN has worked alongside some of the biggest icons of recent times - including Beckham, Usain Bolt and Neymar Jr – and manages more than 60 talented young footballers across Europe.
          
         Simon also played a crucial role in the formation of OTRO, bringing together the likes of Lionel Messi, Luis Suarez, David Beckham and Zinedine Zidane to create a new global digital platform and content studio. Under his direction, KIN Partners has co-produced cinematic documentaries including Class of '92, I am Bolt and For the Love of the Game.
-    - image: /img/dom-freeman-2x.png
+    - image: /img/dom-freeman-2x.jpg
       text: >+
         Dom Freeman (Producer Founder)
 
@@ -45,8 +45,8 @@ pageCopy:
         The originating producer of Girl from the North Country the Olivier award-winning theatre show based on the music of Bob Dylan, which is shortly transferring to Broadway. 
 
         In addition, a proven track record in show-running iconic entertainment series for both ITV and BBC and many other premiere award shows and global events such as One Love Manchester, along with high profile celebrity documentaries with Joanna Lumley, : Elvis, Stephen Hawking and Sheridan Smith.
-      image: /img/steven-lappin-2x.png
-    - image: /img/sophie-lloyd-2x.png
+      image: /img/steven-lappin-2x.jpg
+    - image: /img/sophie-lloyd-2x.jpg
       text: >
         Sophie Lloyd (Head of Development)
 
@@ -59,5 +59,5 @@ pageCopy:
 
 
         Callum is Development Executive at Next of Kind Films, where he works across entertainment, factual entertainment, and documentaries. With seven years of international experience, he has previously worked at Bandicoot TV (The Masked Singer), Expectation Entertainment and Fremantlemedia Australia in Sydney.  As a producer, he has worked on worldwide formats such as MasterChef Australia, The X-Factor and Big Brother.  He’s a short film maker and writer, to boot! 
-      image: /img/callum-metcalfe-2x.png
+      image: /img/callum-metcalfe-2x.jpg
 ---
