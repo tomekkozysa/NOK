@@ -1,9 +1,10 @@
 ---
 templateKey: project
 title: "Robbie Williams: “Me and My Monkey”"
-category: “In Production” 2021
+category: "2021"
 date: 2021-07-05T18:01:21.850Z
 image: /img/me-and-my-monkey-2x.jpg
 description: Celebrating the 25th Anniversary of Robbie Williams Solo Career.
   Due for theatrical release September/October 2021
+featured: false
 ---
