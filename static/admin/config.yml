@@ -30,8 +30,8 @@ collections:
           label: "Category",
           name: "category",
           widget: "select",
-          multiple: true,
-          options: ["TV and Theatre", "Short Form and Commercial", "Films"],
+          multiple: false,
+          options: ["Short Form and Commercial", "Films","2020","2021"],
           default: ["Films"],
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
