@@ -11,7 +11,7 @@
 .home-page-links{
 
   font-size:var(--fs-links);
-  text-decoration:line-through;
+  /* text-decoration:line-through; */
   text-decoration-color:white;
   /* opacity: .1; */
   text-align: center;
