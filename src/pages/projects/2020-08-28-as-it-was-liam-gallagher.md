@@ -1,11 +1,11 @@
 ---
-title: 'As It Was: Liam Gallagher'
+title: "Liam Gallagher: As It Was"
 category:
-  - Films
-date: 2020-09-30T14:19:00.000Z
-image: /img/Gallagher.jpg
-description: "A no-holds-barred look at the life of one of the most talked-about and charismatic artists of his generation.\t\t\t\t\t\t"
+  - Short Form and Commercial
+date: 2021-07-05T17:48:28.399Z
+image: /img/as-it-was-2x.jpg
+description: Following Liam Gallagher’s return to stage as a solo artist and his
+  insight into his previous life with Oasis.
 featured: false
-externalURL: ''
+externalURL: ""
 ---
-
