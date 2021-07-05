@@ -1,12 +1,11 @@
 :root {
   --fs-about-text: 18px;
-  
 }
 
 .about-page {
   max-width: var(--layout-maxw);
   margin: var(--layout-mt) auto 0;
-  color: var(--c-primary);
+  
   padding: 5vh 40px;
 }
 
@@ -33,6 +32,7 @@
 
 .profile-img-wrapper {
   flex: 2 1;
+  align-self: flex-start;
 }
 .profile-img {
   max-width: 400px;
@@ -44,7 +44,7 @@
   flex: 2 1;
 }
 .about-page-profile-text-copy {
-  padding: 2em;
+  padding:0 2em;
 }
 
 @media (max-width: 575.98px) {

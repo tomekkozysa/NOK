@@ -39,7 +39,7 @@ const ProjectsSection = ({ projects, featuredProjects }) => {
 
   return (
     <section className="home-page-content">
-      <hr className="projects-filter-ruler" role="presentation" />
+      {/* <hr className="projects-filter-ruler" role="presentation" />
       <h2 className="projects-filter-headline">Our work</h2>
       <div className="projects-filter-items">
         <ul className="projects-filter-items-list">
@@ -56,7 +56,7 @@ const ProjectsSection = ({ projects, featuredProjects }) => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
       <section className="home-page-projects" ref={allProjects}>
         <div
           className={startAnimation ? "nok-projects-wrapper" : ""}
@@ -73,7 +73,7 @@ const ProjectsSection = ({ projects, featuredProjects }) => {
                 />
               </div>
               <div className="nok-project-text">
-                <p className="nok-project-category">{project.category}</p>
+                {/* <p className="nok-project-category">{project.category}</p> */}
                 <h3 className="nok-project-heading">{project.title}</h3>
                 <p className="nok-project-text-copy">{project.description}</p>             
                 {project.externalURL && project.externalURLLabel && 

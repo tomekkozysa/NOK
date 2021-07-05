@@ -31,7 +31,7 @@
     background-image:var(--header-logo-svg);
     background-repeat: no-repeat;
     background-position:  center;
-    background-size: auto var(--header-logo-height);
+    background-size: var(--header-logo-width) var(--header-logo-height);
      
 }
 .header-logo-link{

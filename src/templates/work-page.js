@@ -3,10 +3,11 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import { Link } from "gatsby";
-import "./index-page.css";
+import "./work-page.css";
 import { shuffle } from "../utils";
+import ProjectsSection from "../components/ProjectsSection";
 
-export const IndexPageTemplate = ({
+export const WorkPageTemplate = ({
   // image,
   title,
   // heading,
@@ -22,29 +23,20 @@ export const IndexPageTemplate = ({
   featuredProjects
 }) => {
   return (
-    <section className="home-page">
-      <div className="home-page-links">
-        <Link className="home-page-link" to={'/work'}> work </Link><br />
-        <Link className="home-page-link" to={'/about'}> about </Link>
-        {/* <p className="home-page-link"> about </p>
-        <p className="home-page-link"> work </p> */}
-      </div>
-      
-      <div className="home-page-contact">
-        <h3 className="home-page-contact-headline">contact</h3>
-        <div className="home-page-contact-details">
-          +44 20 33130 9004<br />
-          King's court<br />
-          2-16 Goodge Street<br />
-          London W1T 2QA<br />
-          <a className="home-page-mail-link" href="mailto:info@kinpartners.com">info@kinpartners.com</a><br />
-        </div>
-      </div>     
+    <section className="work-page">
+     
+     
+     <ProjectsSection
+        projects={projects}
+        featuredProjects={projects} />
+
+
+
     </section>
   );
 };
 
-IndexPageTemplate.propTypes = {
+WorkPageTemplate.propTypes = {
   // image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   // heading: PropTypes.string,
@@ -56,7 +48,7 @@ IndexPageTemplate.propTypes = {
   // })
 };
 
-const IndexPage = ({ data }) => {
+const WorkPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   const projects = data.projects.nodes;
   const featuredProjects = shuffle(data.featuredProjects.nodes);
@@ -64,20 +56,22 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate
+
+      <WorkPageTemplate
         title={frontmatter.title}
         projects={projects}
-        HeroStatement={HeroStatement}
-        ShowreelCTA={ShowreelCTA}
-        videoUrl={videoUrl}
-        blurbs={blurbs}
+        // HeroStatement={HeroStatement}
+        // ShowreelCTA={ShowreelCTA}
+        // videoUrl={videoUrl}
+        // blurbs={blurbs}
         featuredProjects={featuredProjects}
       />
+
     </Layout>
   );
 };
 
-IndexPage.propTypes = {
+WorkPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -85,10 +79,10 @@ IndexPage.propTypes = {
   }),
 };
 
-export default IndexPage;
+export default WorkPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplateX {
+  query WorkPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
            title

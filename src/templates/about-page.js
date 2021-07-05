@@ -25,6 +25,8 @@ export const AboutPageTemplate = ({ aboutIntro, blurbs, isTemplate }) => {
         {blurbs.map((blurb, key) => {
           return (<div key={key} className="about-page-profile">
             <div className="profile-img-wrapper">
+            
+          
               {isTemplate ? <img src={blurb.image} /> : <Img
 
                 placeholderStyle={{ opacity: 0 }}
