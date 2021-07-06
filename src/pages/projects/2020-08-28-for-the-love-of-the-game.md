@@ -1,12 +1,10 @@
 ---
 title: For The Love of the Game
 category: Films
-date: 2020-08-28T14:03:08.167Z
+date: 2021-07-06T20:37:07.483Z
 image: /img/love-of-the-game-2x.jpg
 heading: For The Love of the Game
-description: |+
-  David Beckham ...						
-
-
+description: A Documentary Following David Beckham as he travels to seven
+  continents and plays an individual match in each.
 featured: true
 ---
