@@ -1,7 +1,7 @@
 ---
 title: The Tales of Thomas Burberry
 category: Short Form and Commercial
-date: 2020-08-28T14:15:07.189Z
+date: 2021-07-06T20:36:12.127Z
 image: /img/the-tale-of-thomas-burberry-2x.jpg
 heading: The Tales of Thomas Burberry
 description: >-
