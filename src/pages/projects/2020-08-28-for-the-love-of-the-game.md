@@ -1,8 +1,8 @@
 ---
 title: For The Love of the Game
-category: "2021"
+category: Films
 date: 2020-08-28T14:03:08.167Z
-image: /img/Love-of-Game.jpg
+image: /img/love-of-the-game-2x.jpg
 heading: For The Love of the Game
 description: |+
   David Beckham ...						
