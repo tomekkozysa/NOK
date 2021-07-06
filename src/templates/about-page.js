@@ -12,7 +12,7 @@ export const AboutPageTemplate = ({ aboutIntro, blurbs, isTemplate }) => {
   return (
     <section className="about-page">
 
-      <h2 className="about-page-title">
+      <h2 className="about-page-headline">
         About
       </h2>
 

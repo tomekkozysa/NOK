@@ -9,8 +9,9 @@ import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 import Footer from "../components/Footer"
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, path }) => {
   const { title, description, siteUrl } = useSiteMetadata();
+  console.log('siteUrl',siteUrl, path)
   return (
     <div>
       <Helmet>

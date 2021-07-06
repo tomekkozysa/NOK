@@ -3,22 +3,19 @@
 
 
     --layout-maxw:1040px;    
-    --layout-mt:10vh;
+    --layout-mt:100px;
+    --layout-mb:200px;
     
     /*used with alternating mobile layout */
     --alt-padding-mobile: 10vw;
-    --padding-mobile: .5em;
-
-
-    
+    --padding-mobile: .5em;   
     
     
     --ff-primary: "Roboto Mono";
 
 
 
-      /* body */
-      --c-body-bgr: #000;
+      
       
       
       
@@ -30,6 +27,26 @@
       --fs-body-Tablet: 16px;
 
 
+
+
+      --c-body-bgr: #000;
+        
+    --c-primary: #a0191e;
+    --c-text: #fff;
+    --c-link: #fff;
+    --c-text-secondary: #000105;
+
+
+    --c-secondary: #000105;
+    --c-secondary-accent: #fff;
+    
+
+
+
+
+
+
+    
       /*      
 
       homepage 
@@ -70,27 +87,6 @@
 
 
 
-    /* hero */
-
-    
-    --fs-hero: 56px;
-    --fs-hero-mobile:32px;
-
-    --hero-video-maxw:1040px;
-
-    /* hero statement font-size clamp values */
-    --minFontSize: 32px;
-    --maxFontSize: 72px;
-    --scaler: 10vw;
-
-
-
-    --fs-hero-cta:32px;
-    --fs-hero-cta-mobile:22px;
-
-    
-    --fs-hero-close-btn:16px;
-
     
 
 
@@ -118,40 +114,31 @@
     --fs-project-heading-Tablet:26px;
 
   
+    
+
+    --fs-projects-collection-headline:24px;
+    --fs-projects-collection-mt:2em;
+    --fs-projects-collection-mb:4em;
+
+
+
+     --nok-project-spacing-top:8em;
+     --nok-project-1st-spacing-top:4em;
+     --nok-project-spacing-bottom:8em;
+
+
+
+
+  /* pages */
+
+
+
+  --fs-page-headline: 32px;
+  --fs-page-headline-mt: 14em;
+  --fs-page-headline-content-space: 4em;
+
+
   
-
-    /* filters */
-    --fs-filter-item:16px;
-    --fs-filter-item-mobile:14px;
-    
-    --fs-filter-headline:32px;
-    --fs-filter-headline-mobile:22px;
-
-  /* sections */
-
-
-
-  --fs-section-headline: 32px;
-  --fs-section-headline-Tablet: 26px;
-  --fs-section-headline-Mobile: 16px;
-
-
-
- 
-
-
-    --c-primary: #a0191e;
-    --c-text: #fff;
-    --c-link: #fff;
-    --c-text-secondary: #000105;
-
-
-    --c-secondary: #000105;
-    --c-secondary-accent: #fff;
-    
-
-
-
    
 
 
@@ -207,3 +194,44 @@ body{
   }
 }
 
+
+
+/*
+
+  Layout CSS
+
+*/
+
+.layout-content{
+  margin-top:var(--layout-mt);
+  margin-bottom:var(--layout-mb);
+}
+
+
+/*
+
+
+
+   
+    
+    --fs-hero: 56px;
+    --fs-hero-mobile:32px;
+
+    --hero-video-maxw:1040px;
+
+   
+    --minFontSize: 32px;
+    --maxFontSize: 72px;
+    --scaler: 10vw;
+
+
+
+    --fs-hero-cta:32px;
+    --fs-hero-cta-mobile:22px;
+
+    
+    --fs-hero-close-btn:16px;
+
+
+
+*/

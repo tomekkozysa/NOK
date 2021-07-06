@@ -4,31 +4,34 @@
 
 .about-page {
   max-width: var(--layout-maxw);
-  margin: var(--layout-mt) auto 0;
-  
-  padding: 5vh 40px;
+  margin: 0 auto;
+  /* padding: 5vh 40px; */
 }
 
-.about-page-title {
-  font-size: var(--fs-section-headline);
+.about-page-headline {
+  text-align: center;
+  font-size: var(--fs-page-headline);
+  /* margin-top:var(--fs-page-headline-mt); */
+  text-transform: uppercase;
 }
 
 .about-page-intro {
+  margin-top: var(--fs-page-headline-content-space);
 }
-.about-page-profiles {
-  
+
+.about-page-profiles {}
+
+.about-page-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
 }
 
 .about-page-profile:nth-child(even) {
   flex-direction: row-reverse;
 }
-.about-page-profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* min-height: 60vh; */
-  margin-top: 5em;
-}
+
 
 .profile-img-wrapper {
   flex: 2 1;
