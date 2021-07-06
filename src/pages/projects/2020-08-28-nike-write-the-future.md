@@ -1,7 +1,7 @@
 ---
 title: "Nike: Write the future"
 category: Short Form and Commercial
-date: 2020-08-28T14:14:21.311Z
+date: 2021-07-06T20:35:25.633Z
 image: /img/write-the-future-2x.jpg
 heading: "Nike: Write the future"
 description: >-
