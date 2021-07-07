@@ -4,7 +4,7 @@
 
 .about-page {
   max-width: var(--layout-maxw);
-  margin: 0 auto;
+  margin: var(--layout-mt) auto var(--layout-mb);
   /* padding: 5vh 40px; */
 }
 

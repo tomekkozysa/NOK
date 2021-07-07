@@ -198,8 +198,11 @@ body{
 */
 
 .layout-content{
-  margin-top:var(--layout-mt);
-  margin-bottom:var(--layout-mb);
+  /* padding-top:var(--layout-mt); */
+  /* margin-bottom:var(--layout-mb); */
+  --let-size: calc(var(--header-height) + var(var(--layout-mt)));
+  min-height: calc(100vh - calc(var(--let-size) - 2px));
+
 }
 
 

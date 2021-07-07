@@ -1,9 +1,11 @@
 .contact-page{
 
     max-width:var(--layout-maxw);
-    margin:0 auto 0;
+    margin:0 auto;
+    padding-top: var(--layout-mt);
+    min-height: calc(calc(100vh - var(--header-height)) - 4px);
     color:var(--c-primary);
-    padding:5vh 40px;
+    /* padding:5vh 40px; */
     text-align: center;
     color:white;
 }

@@ -1,6 +1,6 @@
 .work-page {
     max-width: var(--layout-maxw);
-    margin: 0 auto 0;  
+    margin: var(--layout-mt) auto var(--layout-mb);
 }
 
 .work-page-heading {
