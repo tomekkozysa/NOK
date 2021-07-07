@@ -34,6 +34,7 @@
   
   .project-img-wrapper {
     flex: 2 2; /* let image width specify the size of the wrapper*/
+    max-width: 420px;
     position: relative;
   }
   
