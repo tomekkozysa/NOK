@@ -25,12 +25,13 @@ export const IndexPageTemplate = ({
     <section className="home-page">
       <div className="home-page-links">
         <Link className="home-page-link" to={'/work'}>work</Link><br />
-        <Link className="home-page-link" to={'/about'}>about</Link>
+        <Link className="home-page-link" to={'/about'}>about</Link><br />
+        <Link className="home-page-link" to={'/contact'}>contact</Link>
         {/* <p className="home-page-link"> about </p>
         <p className="home-page-link"> work </p> */}
       </div>
-      
-      <div className="home-page-contact">
+
+      {/* <div className="home-page-contact">
         <h3 className="home-page-contact-headline">contact</h3>
         <div className="home-page-contact-details">
           +44 20 33130 9004<br />
@@ -39,7 +40,9 @@ export const IndexPageTemplate = ({
           London W1T 2QA<br />
           <a className="home-page-mail-link" href="mailto:info@kinpartners.com">info@kinpartners.com</a><br />
         </div>
-      </div>     
+      </div>  */}
+      
+        
     </section>
   );
 };

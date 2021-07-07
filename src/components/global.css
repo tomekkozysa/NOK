@@ -8,28 +8,23 @@
     
     /*used with alternating mobile layout */
     --alt-padding-mobile: 10vw;
-    --padding-mobile: .5em;   
+    --padding-mobile: .5em;      
     
-    
-    --ff-primary: "Roboto Mono";
-
-
-
+    --ff-primary: "Roboto Mono";    
       
       
       
-      
-      --fs-body: 20px;
-      --fs-body-mobile: 16px;
+    --fs-body: 20px;
+    --fs-body-mobile: 16px;
 
 
-      --fs-body-Mobile: 18px;
-      --fs-body-Tablet: 16px;
+    --fs-body-Mobile: 18px;
+    --fs-body-Tablet: 16px;
 
 
 
 
-      --c-body-bgr: #000;
+    --c-body-bgr: #000;
         
     --c-primary: #a0191e;
     --c-text: #fff;

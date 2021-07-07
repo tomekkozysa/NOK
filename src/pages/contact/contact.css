@@ -1,34 +1,43 @@
 .contact-page{
 
     max-width:var(--layout-maxw);
-    margin:var(--layout-mt) auto 0;
+    margin:0 auto 0;
     color:var(--c-primary);
     padding:5vh 40px;
+    text-align: center;
+    color:white;
 }
+
 
 
 .contact-page-headline{
-    font-size:var(--fs-section-headline);
+  text-transform: uppercase;
+  text-align: center;
+  font-size:var(--fs-page-headline);
 }
 
-.contact-page-detail{
-  
+
+.contact-page-detail,
+.contact-address,
+.contact-page-primary-details{
+  margin-top: var(--fs-page-headline-content-space);
+  font-size: var(--fs-contact);
 }
+
+
 
 .contact-address{
-  margin-top:1em;
   font-style: normal;
 }
+
+
 .contact-page-detail a{
- text-decoration: underline;
- color:var(--fs-primary);
+
 }
 
-
-.social-headline,
-.contact-page-primary-details,
-.social-links{
-
-  margin-top:2em;
-
+.contact-page-email{
+  display: inline-block;
+  margin-top: 2em;
+  text-decoration: underline;
+  color:var(--fs-primary);
 }
