@@ -13,7 +13,7 @@ pageCopy:
   blurbs:
     - image: src/pages/about/simon-oliveira-2x.jpg
       text: >
-        Simon Oliveira (Producer Founder)
+        Simon Oliveira (Producer Founder).
 
 
         Simon Oliveira has been at the forefront of many high-profile athlete, brand and commercial property partnerships in the sport and entertainment industries over the past two decades. 
@@ -25,7 +25,7 @@ pageCopy:
         Simon also played a crucial role in the formation of OTRO, bringing together the likes of Lionel Messi, Luis Suarez, David Beckham and Zinedine Zidane to create a new global digital platform and content studio. Under his direction, KIN Partners has co-produced cinematic documentaries including Class of '92, I am Bolt and For the Love of the Game.
     - image: src/pages/about/dom-freeman-2x.jpg
       text: >+
-        Dom Freeman (Producer Founder)
+        Dom Freeman (Producer Founder).
 
 
         Dom is a multi-award-winning commercial and documentary film producer. He has produced numerous commercials for brands including Christian Dior, Louis Vuitton, Hugo Boss, Calvin Klein, Agent Provocateur, Burberry, Jaguar, Patek Philippe, Ford, Mont Blanc, Standard Chartered and most notably his iconic work for Nike. 
@@ -37,7 +37,7 @@ pageCopy:
         Recently he has co-producer Coming Home with Sheridan Smith and the recent features Spirits in the Forest and Anniversary for Depeche Mode and The Cure respectively. 
 
     - text: >
-        Steven Lappin (Producer Founder)
+        Steven Lappin (Producer Founder).
 
 
         Steven is an independent producer working in television, film and theatre. His recent work includes producing global feature documentary films for George Michael, Liam Gallagher and Bruce Springsteen. 
@@ -48,14 +48,14 @@ pageCopy:
       image: src/pages/about/steven-lappin-2x.jpg
     - image: src/pages/about/sophie-lloyd-2x.jpg
       text: >
-        Sophie Lloyd (Head of Development)
+        Sophie Lloyd (Head of Development).
 
 
         Sophie joined Next of Kin Films as Head of Development in March 2020 and is responsible for developing documentaries, factual entertainment, and entertainment shows. Previously, Sophie worked as Head of Development and Development Exec for companies in London and New York, such as BBC Studios, Optomen Television, Optomen USA and Lion Television NYC. 
 
         Prior to life in Development, Sophie worked as Series Producer across some of the UK’s noisiest first series, from Seven Days to The Face, alongside reality favourites Big Brother, I’m A Celebrity and Shipwrecked. 
     - text: >-
-        Callum Metcalfe (Development Executive)
+        Callum Metcalfe (Development Executive).
 
 
         Callum is Development Executive at Next of Kind Films, where he works across entertainment, factual entertainment, and documentaries. With seven years of international experience, he has previously worked at Bandicoot TV (The Masked Singer), Expectation Entertainment and Fremantlemedia Australia in Sydney.  As a producer, he has worked on worldwide formats such as MasterChef Australia, The X-Factor and Big Brother.  He’s a short film maker and writer, to boot! 
