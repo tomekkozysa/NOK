@@ -1,0 +1,60 @@
+.player{
+    position: fixed;
+    width: 100%;
+    height:100vh;
+    background-color: rgba(0,0,0,.7);
+    z-index: 1000;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.player-frame{
+    position: relative;
+    padding:0em 1em;
+    background-color: rgba(0,0,0,.7);
+}
+/* .player-frame-ratio{
+    padding:56.25% 0 0 0;
+    position:relative;
+}
+.player-frame iframe{
+    position:absolute;top:0;left:0;width:100%;height:100%;
+} */
+.player-close-button{
+
+    cursor: pointer;
+    height:var(--nav-icon-size);
+    width:auto;
+    position: absolute;
+    top:0;
+    right:0;
+
+}
+
+
+.nav-toggle-button.is_open{
+    /* transform:rotate(180deg); */
+    /* transform-origin: center; */
+}
+
+
+
+
+
+
+
+.player-close-button-line-one{
+    transform:translate(0, 0px) rotate(225deg);
+    transform-origin: center;
+    transition: transform .3s;
+    stroke-width: 3px;
+  }
+  .player-close-button-line-two{
+    transform:translate(0, 0px) rotate(-45deg);
+    transform-origin: center;
+    transition: transform .3s;
+    stroke-width: 3px;
+    
+  }

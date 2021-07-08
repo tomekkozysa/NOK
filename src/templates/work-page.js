@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Player from "../components/Player";
 import "./work-page.css";
 // import { shuffle } from "../utils";
 import ProjectsCollection from "../components/ProjectsCollection";
@@ -9,11 +10,21 @@ import ProjectsCollection from "../components/ProjectsCollection";
 
 
 const WorkPage = ({ data }) => {
+
+  const [playerid, setPlayerID] = useState(0);
+
+
   const { frontmatter } = data.markdownRemark;
   const projects = data.projects.nodes;
   const CATEGORIES = ["Short Form and Commercial", "Films", "2020", "2021"];
 
-  
+  const watchTrailer = id => {
+    console.log(id);
+    setPlayerID(id);
+  }
+  const closeTrailer = () => {    
+    setPlayerID(0);
+  }
 
   const cat_shorts = projects.filter( pr => {
 
@@ -74,19 +85,24 @@ const WorkPage = ({ data }) => {
       <ProjectsCollection
           headline={"“In Production” 2021"}
           projects={cat_21}
+          trailer = {watchTrailer}
+          
         />
 
       <ProjectsCollection
           headline={"“In Production” 2020"}
           projects={cat_20}
+          trailer = {watchTrailer}
         />
       <ProjectsCollection
           headline={"Previous Films from Next of Kin Producers"}
           projects={cat_films}
+          trailer = {watchTrailer}
         />
       <ProjectsCollection
           headline={"Shorts & Commercials from Next of Kin Producers"}
           projects={cat_shorts}
+          trailer = {watchTrailer}
         />
       </div>
 
@@ -95,7 +111,7 @@ const WorkPage = ({ data }) => {
 
     </section>
 
-
+    {playerid && <Player id={playerid}  closeClick ={e=>setPlayerID(0)}/>}
 
     </Layout>
   );
@@ -144,6 +160,7 @@ export const pageQuery = graphql`
           externalURL
           externalURLLabel
           featured
+          vimeoid
           image {
             childImageSharp {
               fluid(maxWidth: 400, quality: 100) {

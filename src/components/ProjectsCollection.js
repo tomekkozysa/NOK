@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import Img from "gatsby-image";
 import "./projects-collection.css";
 
-const ProjectsSection = ({ projects, headline  }) => {
+const ProjectsSection = ({ projects, headline, trailer  }) => {
   const [projectsToDisplay, setProjectsToDisplay] = useState(projects);
   const [startAnimation, setStartAnimation] = useState(false);
   
@@ -10,6 +10,9 @@ const ProjectsSection = ({ projects, headline  }) => {
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 200);
   const allProjects = useRef(null);
   const scrollUp = () => scrollToRef(allProjects);
+
+
+  const watchTrailer = (id)=> trailer(id);
 
   return (
     <section className="projects-collection">
@@ -35,7 +38,11 @@ const ProjectsSection = ({ projects, headline  }) => {
                 {/* <p className="nok-project-category">{project.category}</p> */}
                 <h3 className="nok-project-heading">{project.title}</h3>
                 <p className="nok-project-text-copy">{project.description}</p>             
-                {project.externalURL && project.externalURLLabel && 
+
+                {project.vimeoid && 
+                  <a href="#" onClick={(e)=>{e.preventDefault(); watchTrailer(project.vimeoid)}} className="nok-project-more-link"> Watch trailer </a>
+                }
+                {!project.vimeoid && project.externalURL && project.externalURLLabel && 
                   <a href={project.externalURL} target="_blank" className="nok-project-more-link"> {project.externalURLLabel}</a>
                 }   
               </div>
