@@ -12,6 +12,7 @@
 }
 .player-frame{
     position: relative;
+    width: 80vw;
     padding:0em 1em;
     background-color: rgba(0,0,0,.7);
 }
