@@ -8,4 +8,5 @@ description: "Featuring the intimate stories of six Depeche Mode fans from
   around the World as they join DM of the final moment of their 2017 Global
   Spirit Tour. "
 featured: false
+vimeoid: "572229036"
 ---
