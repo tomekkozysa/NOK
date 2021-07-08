@@ -9,7 +9,7 @@ description: >-
 
   Director: Alejandro Inarritu.
 
-  Cast: Kobe Bryant, Fabio Cannavaro, Didier Drogba, Roger Federer, Fabregas, Iniesta, Ribery, Ronaldo, Wayne Rooney & Homer Simpson etc etc
+  Cast: Kobe Bryant, Fabio Cannavaro, Didier Drogba, Roger Federer, Fabregas, Iniesta, Ribery, Ronaldo, Wayne Rooney & Homer Simpson, etc.
 featured: false
 vimeoid: "572229137"
 ---
