@@ -9,9 +9,9 @@ description: >-
   begins with Law's character speaking into a telephone, seeming to threaten the
   unheard voice on the other end.
 
-  Director: Guy Ritchie
+  Director: Guy Ritchie.
 
-  Cast: Jude Law & Michaela Kocianovaz
+  Cast: Jude Law & Michaela Kocianovaz.
 featured: false
 vimeoid: "572438465"
 ---
