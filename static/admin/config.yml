@@ -43,11 +43,20 @@ collections:
           widget: "boolean",
           default: false,
         }
+      
+      - {
+          label: "Vimeo ID",
+          name: "vimeoid",
+          widget: "string",
+          required: false
+          
+        }
       - {
           label: "Project external link label",
           name: "externalURLLabel",
           widget: "string",
           required: false,
+          default: "Watch trailer"
         }
       - {
           label: "Project external link URL",
