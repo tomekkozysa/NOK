@@ -7,6 +7,6 @@ description: A frank and honest account of George Michael’s professional life
   and Career, made by the man himself with various artists adding to the
   narrative.
 featured: false
-externalURLLabel: trailer on IMDB
+externalURLLabel: Watch the trailer on IMDB
 externalURL: https://www.imdb.com/title/tt7521040/
 ---
